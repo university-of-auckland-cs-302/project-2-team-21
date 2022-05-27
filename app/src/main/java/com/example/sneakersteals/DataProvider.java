@@ -19,7 +19,7 @@ public class DataProvider {
         // with id = 1 as an example
         if (id == 1) {
             name = "Shoe 1";
-            brand = "addidas";
+            brand = "Addidas";
             description = "placeholder description";
             colourList.add("Blue");
             colourList.add("White");
@@ -53,5 +53,18 @@ public class DataProvider {
 
         return shoeList;
     }
-    
+
+    public static List<Shoe> getBrandShoes(String brand) {
+        //This function will provide a list of generated shoe objects.
+        List<Shoe> shoeList = new LinkedList<Shoe>();
+        for (int i = 1; i < 3 ; i++) {
+            Shoe currentShoe = generateShoe(i);
+            if (currentShoe.getBrand().equals(brand)) {
+                shoeList.add(currentShoe);
+            }
+        }
+
+
+        return shoeList;
+    }
 }

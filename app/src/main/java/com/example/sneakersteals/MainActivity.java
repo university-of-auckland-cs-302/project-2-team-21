@@ -24,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
 
     class ViewHolder {
         CardView cardviewNike;
+        CardView cardviewAddidas;
 
-        public ViewHolder() {cardviewNike = findViewById(R.id.cardview_nike);}
+        public ViewHolder() {
+            cardviewNike = findViewById(R.id.cardview_nike);
+            cardviewAddidas = findViewById(R.id.cardview_addidas);
+        }
     }
 
     ViewHolder vh;
@@ -41,7 +45,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
-                listActivity.putExtra("message", "A text from MainActivity");
+                listActivity.putExtra("Brand", "Nike");
+                startActivity(listActivity);
+            }
+        });
+
+        vh.cardviewAddidas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
+                listActivity.putExtra("Brand", "Addidas");
                 startActivity(listActivity);
             }
         });
