@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,16 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     Context mContext;
     List<Shoe> mShoes;
 
+    class ViewHolder {
+        TextView shoeTextView;
+        ImageView shoeImageView;
+
+        public ViewHolder(View currentView) {
+            shoeTextView = (TextView) currentView.findViewById(R.id.category_listview_text);
+            shoeImageView = (ImageView) currentView.findViewById(R.id.category_listview_icon);
+        }
+    }
+
     public ShoeAdaptor(@NonNull Context context, int resource, @NonNull List<Shoe> objects) {
         super(context, resource, objects);
 
@@ -34,7 +45,6 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        return super.getView(position, convertView, parent);
         //Get a reference to the current ListView item
         View currentListViewItem = convertView;
 
@@ -42,20 +52,23 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
         if (currentListViewItem == null) {
             currentListViewItem = LayoutInflater.from(getContext()).inflate(mLayout, parent, false);
         }
+
+        ViewHolder vh = new ViewHolder(currentListViewItem);
         //Get the Number object for the current position
         Shoe currentShoe = mShoes.get(position);
 
         //Set the attributed of list_view_number_item views
-        ImageView iconImageView = (ImageView) currentListViewItem.findViewById(R.id.icon_image_view);
+
         int i = mContext.getResources().getIdentifier(
-                currentShoe.getImageFilenameList().get(1), "drawable",
+                currentShoe.getImageFilenameList().get(0), "drawable",
                 mContext.getPackageName());
+        vh.shoeTextView.setText(currentShoe.getName());
+        //Setting the icon\
+        vh.shoeImageView.setImageResource(i);
 
-        //Setting the icon
-        iconImageView.setImageResource(i);
 
-        TextView nameTextView = (TextView) currentListViewItem.findViewById(R.id.maori_text_view);
-        nameTextView.setText(currentShoe.getName());
+        //iconImageView.setImageResource(i);
+
 
 //        //Getting the audio resource id for the current Number object
 //        final String audio = currentNumber.getAudioFilename();
