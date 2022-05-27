@@ -1,4 +1,4 @@
-package com.example.sneakersteals.Adaptors;
+/*package com.example.sneakersteals.Adaptors;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -36,7 +36,7 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         return super.getView(position, convertView, parent);
         //Get a reference to the current ListView item
-        View currentListViewItem = convertView;
+        //View currentListViewItem = convertView;
 
         // Check if the existing view is being reused, otherwise inflate the view
         if (currentListViewItem == null) {
@@ -46,16 +46,16 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
         Shoe currentShoe = mShoes.get(position);
 
         //Set the attributed of list_view_number_item views
-        ImageView iconImageView = (ImageView) currentListViewItem.findViewById(R.id.icon_image_view);
+        //ImageView iconImageView = (ImageView) currentListViewItem.findViewById(R.id.icon_image_view);
         int i = mContext.getResources().getIdentifier(
                 currentShoe.getImageFilenameList().get(1), "drawable",
                 mContext.getPackageName());
 
         //Setting the icon
-        iconImageView.setImageResource(i);
+        //iconImageView.setImageResource(i);
 
-        TextView nameTextView = (TextView) currentListViewItem.findViewById(R.id.maori_text_view);
-        nameTextView.setText(currentShoe.getName());
+        //TextView nameTextView = (TextView) currentListViewItem.findViewById(R.id.maori_text_view);
+        //nameTextView.setText(currentShoe.getName());
 
 //        //Getting the audio resource id for the current Number object
 //        final String audio = currentNumber.getAudioFilename();
@@ -83,3 +83,4 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     }
 
 }
+*/
