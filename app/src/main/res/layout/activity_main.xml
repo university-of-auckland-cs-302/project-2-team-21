@@ -19,7 +19,6 @@
             app:civ_border_width="2dp"
             android:paddingStart="10dp"
             tools:ignore="RtlSymmetry" />
-
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -31,7 +30,6 @@
             android:minHeight="48dp"
             android:textColorHint="#C2F0E8"
             tools:ignore="HardcodedText" />
-
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,8 +39,8 @@
             android:minHeight="48dp"
             android:src="@drawable/ic_baseline_search_24"
             tools:ignore="HardcodedText" />
-    </LinearLayout>
 
+    </LinearLayout>
 
     <TextView
         android:id="@+id/TopPicks"
@@ -58,136 +56,14 @@
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
-        <LinearLayout
-            android:id="@+id/TopPicksShoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/TopPicks"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="2.5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
 
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp"/>
-
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/Nike"
+    <LinearLayout
+        android:id="@+id/TopPicksShoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="0dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Nike"
-        android:textAlignment="center"
-        android:textColor="#C2F0E8"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-        <LinearLayout
-            android:id="@+id/NikeShoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Nike"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="2dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp"/>
-
-
-        </LinearLayout>
-
-    <TextView
-        android:id="@+id/Adidas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="315dp"
-        android:layout_marginEnd="0dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Adidas"
-        android:textAlignment="center"
-        android:textColor="#C2F0E8"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-        <LinearLayout
-
-        android:id="@+id/AdidasShoes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Adidas"
+        android:layout_below="@+id/TopPicks"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2.5dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -226,130 +102,117 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/Jordans"
-        android:layout_width="match_parent"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/NikeClouds"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/TopPicksShoes"
+        android:src="@drawable/nikeclouds"
+        android:layout_marginTop="40dp"
+        android:paddingStart="5dp"
+
+        app:civ_border_color="#C2F0E8"
+        app:civ_border_width="2dp"
+
+        tools:ignore="RtlSymmetry" />
+        <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="200dp"
+        android:paddingStart="69dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:text="Nike"
+        android:textAlignment="gravity"
+        android:textColor="#C2F0E8"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@id/NikeClouds"
+        android:layout_marginTop="240dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignRight="@id/adidasclouds"
+        android:paddingStart="100dp"
+
+        android:src="@drawable/adidasclouds"
+        app:civ_border_color="#C2F0E8"
+
+        app:civ_border_width="2dp"
+        tools:ignore="RtlSymmetry" />
+        <TextView
+        android:id="@+id/adidasclouds"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:gravity="right"
+        android:paddingRight="55dp"
+        android:text="Adidas"
+        android:textAlignment="gravity"
+        android:textColor="#C2F0E8"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/NikeClouds"
+        android:src="@drawable/jordansclouds"
+        android:layout_marginTop="40dp"
+        android:paddingStart="5dp"
+
+        app:civ_border_color="#C2F0E8"
+        app:civ_border_width="2dp"/>
+        <TextView
+        android:id="@+id/JordanLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="395dp"
+        android:gravity="left"
+        android:paddingLeft="45dp"
         android:fontFamily="@font/montserrat_alternates_medium"
         android:text="Jordans"
-        android:textAlignment="center"
+        android:textAlignment="gravity"
         android:textColor="#C2F0E8"
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
-        <LinearLayout
-            android:id="@+id/JordanShoes"
-            android:layout_width="match_parent"
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@id/JordanLogo"
+        android:layout_alignRight="@id/JordanLogo"
+        android:layout_alignBaseline="@id/JordanLogo"
+        android:paddingStart="100dp"
+
+        android:src="@drawable/pumalogo"
+        app:civ_border_color="#C2F0E8"
+
+        app:civ_border_width="2dp"
+        tools:ignore="RtlSymmetry" />
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/Jordans"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="1dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp"/>
-
-
-        </LinearLayout>
-
-    <TextView
-        android:id="@+id/Puma"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="543dp"
-        android:layout_marginEnd="0dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Puma"
-        android:textAlignment="center"
-        android:textColor="#C2F0E8"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-            <LinearLayout
-            android:id="@+id/PumaShoes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/Puma"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="0dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp" />
-
-            <ImageView
-                android:background="@drawable/custom_shoeborder"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/displayshoe"
-                android:contentDescription="@drawable/displayshoe"
-                android:layout_marginStart="10dp"/>
-
-
-    </LinearLayout>
-
-
+            android:layout_marginTop="390dp"
+            android:layout_marginLeft="270dp"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:gravity="right"
+            android:paddingRight="55dp"
+            android:text="Puma"
+            android:textAlignment="gravity"
+            android:textColor="#C2F0E8"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText">
+        </TextView>
 
 
 
 </RelativeLayout>
+
+
