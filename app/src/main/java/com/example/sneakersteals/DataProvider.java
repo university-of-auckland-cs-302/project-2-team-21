@@ -67,4 +67,16 @@ public class DataProvider {
 
         return shoeList;
     }
+
+    public static List<Shoe> getSearchShoes(String input) {
+        List<Shoe> shoeList = new LinkedList<Shoe>();
+        input.toLowerCase();
+        for (int i = 1; i < 3 ; i++) {
+            Shoe currentShoe = generateShoe(i);
+            if (currentShoe.getName().toLowerCase().contains(input)) {
+                shoeList.add(currentShoe);
+            }
+        }
+        return shoeList;
+    }
 }

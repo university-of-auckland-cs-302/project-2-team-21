@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 
 import com.example.sneakersteals.Models.Shoe;
 import com.example.sneakersteals.R;
@@ -27,10 +28,12 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     class ViewHolder {
         TextView shoeTextView;
         ImageView shoeImageView;
+        CardView shoeCardView;
 
         public ViewHolder(View currentView) {
             shoeTextView = (TextView) currentView.findViewById(R.id.category_listview_text);
             shoeImageView = (ImageView) currentView.findViewById(R.id.category_listview_icon);
+
         }
     }
 
