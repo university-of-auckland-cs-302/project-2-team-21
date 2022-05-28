@@ -9,6 +9,10 @@ import android.view.View;
 
 import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.sneakersteals.Adaptors.ShoeAdaptor;
+import com.example.sneakersteals.Adaptors.TopPicksAdaptor;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,11 +20,13 @@ public class MainActivity extends AppCompatActivity {
         CardView cardviewNike;
         CardView cardviewAddidas;
         SearchView searchView;
+        RecyclerView topPicks;
 
         public ViewHolder() {
             cardviewNike = findViewById(R.id.cardview_nike);
             cardviewAddidas = findViewById(R.id.cardview_addidas);
             searchView = findViewById(R.id.searchView);
+            topPicks = findViewById(R.id.recyclerview);
         }
     }
 
@@ -30,8 +36,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
 
         vh = new ViewHolder();
+
+        TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, DataProvider.getTopPicks("Shoe"));
+
+        recyclerView.setAdapter(topPicksAdaptor);
 
         vh.cardviewNike.setOnClickListener(new View.OnClickListener() {
             @Override

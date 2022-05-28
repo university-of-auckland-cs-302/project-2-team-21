@@ -77,6 +77,48 @@ public class DataProvider {
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
+        }  else if (id == 7) {
+            name = "Shoe 7";
+            brand = "Nike";
+            description = "placeholder description 7";
+            colourList.add("Blue");
+            colourList.add("White");
+            imageFilenameList.add("shoes");
+            sizeList.add(8);
+            sizeList.add(9);
+            generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
+        } else if (id == 8) {
+            name = "Shoe 8";
+            brand = "Nike";
+            description = "placeholder description 8";
+            colourList.add("Blue");
+            colourList.add("White");
+            imageFilenameList.add("shoes");
+            sizeList.add(8);
+            sizeList.add(9);
+            generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
+        }
+        else if (id == 9) {
+            name = "Shoe 9";
+            brand = "Nike";
+            description = "placeholder description 9";
+            colourList.add("Blue");
+            colourList.add("White");
+            imageFilenameList.add("shoes");
+            sizeList.add(8);
+            sizeList.add(9);
+            generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
+        }
+        else if (id == 10) {
+            name = "Shoe 10";
+            brand = "Nike";
+            description = "placeholder description 10";
+            colourList.add("Blue");
+            colourList.add("White");
+            imageFilenameList.add("shoes");
+            sizeList.add(8);
+            sizeList.add(9);
+            generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }
 
 
@@ -97,7 +139,7 @@ public class DataProvider {
     public static List<Shoe> getBrandShoes(String brand) {
         //This function will provide a list of generated shoe objects.
         List<Shoe> shoeList = new LinkedList<Shoe>();
-        for (int i = 1; i < 7 ; i++) {
+        for (int i = 1; i < 11 ; i++) {
             Shoe currentShoe = generateShoe(i);
             if (currentShoe.getBrand().equals(brand)) {
                 shoeList.add(currentShoe);
@@ -111,7 +153,7 @@ public class DataProvider {
     public static List<Shoe> getSearchShoes(String input) {
         List<Shoe> shoeList = new LinkedList<Shoe>();
         input.toLowerCase();
-        for (int i = 1; i < 7 ; i++) {
+        for (int i = 1; i < 11 ; i++) {
             Shoe currentShoe = generateShoe(i);
             if (currentShoe.getName().toLowerCase().contains(input)) {
                 shoeList.add(currentShoe);
@@ -121,12 +163,24 @@ public class DataProvider {
     }
 
     public static Shoe getOneShoe(String nameInput) {
-        for (int i = 1; i < 7 ; i++) {
+        for (int i = 1; i < 11 ; i++) {
             Shoe currentShoe = generateShoe(i);
             if (currentShoe.getName().equals(nameInput)) {
                 return currentShoe;
             }
         }
         return null;
+    }
+
+    public static List<Shoe> getTopPicks(String input) {
+        List<Shoe> shoeList = new LinkedList<Shoe>();
+        input.toLowerCase();
+        for (int i = 1; i < 11 ; i++) {
+            Shoe currentShoe = generateShoe(i);
+            if (currentShoe.getName().toLowerCase().contains(input)) {
+                shoeList.add(currentShoe);
+            }
+        }
+        return shoeList;
     }
 }
