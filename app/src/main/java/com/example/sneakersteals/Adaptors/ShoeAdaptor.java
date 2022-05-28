@@ -1,18 +1,20 @@
 package com.example.sneakersteals.Adaptors;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 
+import com.example.sneakersteals.CategoryActivity;
 import com.example.sneakersteals.Models.Shoe;
 import com.example.sneakersteals.R;
 
@@ -33,7 +35,7 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
         public ViewHolder(View currentView) {
             shoeTextView = (TextView) currentView.findViewById(R.id.category_listview_text);
             shoeImageView = (ImageView) currentView.findViewById(R.id.category_listview_icon);
-
+            shoeCardView = (CardView) currentView.findViewById(R.id.category_listview_card);
         }
     }
 

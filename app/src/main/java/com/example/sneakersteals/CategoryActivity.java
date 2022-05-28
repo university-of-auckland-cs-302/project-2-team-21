@@ -3,6 +3,7 @@ package com.example.sneakersteals;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -27,6 +28,7 @@ public class CategoryActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_list);
+            ListView listView = findViewById(R.id.list);
 
             //Get the intent (Which brand to display)
             String brand = getIntent().getStringExtra("Brand");
@@ -36,13 +38,27 @@ public class CategoryActivity extends AppCompatActivity {
             //Check which intent to use.
             if (searchInput == null) {
                 ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, DataProvider.getBrandShoes(brand));
-                ListView listView = findViewById(R.id.list);
+
                 listView.setAdapter(shoeAdaptor);
             } else if (brand == null) {
                 ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, DataProvider.getSearchShoes(searchInput));
-                ListView listView = findViewById(R.id.list);
                 listView.setAdapter(shoeAdaptor);
+
+
             }
+
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    TextView myTextView = (TextView) view.findViewById(R.id.category_listview_text);
+                    String selectedName = myTextView.getText().toString();
+                    Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
+                    nextActivity.putExtra("Name", selectedName);
+                    startActivity(nextActivity);
+                }
+            });
+
 
         }
 }
