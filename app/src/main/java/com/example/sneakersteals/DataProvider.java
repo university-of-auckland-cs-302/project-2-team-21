@@ -26,7 +26,7 @@ public class DataProvider {
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 2) {
-            name = "Shoe 2";
+            name = "Nike Air Force 1 '07";
             brand = "Nike";
             description = "placeholder description";
             colourList.add("Blue");
