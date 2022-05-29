@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
     class ViewHolder {
         CircleImageView circleNike;
         CircleImageView circleAdidas;
-        CircleImageView circleJordan;
         CircleImageView circlePuma;
         SearchView searchView;
         RecyclerView topPicks;
@@ -39,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         public ViewHolder() {
             circleNike = findViewById(R.id.NikeClouds);
             circleAdidas = findViewById(R.id.adidasclouds);
-            circleJordan = findViewById(R.id.jordanImage);
             circlePuma = findViewById(R.id.pumaImage);
             searchView = findViewById(R.id.searchview);
             topPicks = findViewById(R.id.recyclerview);
@@ -87,15 +85,6 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Adidas");
-                //listActivity.putExtra("Database", (Parcelable) database);
-                startActivity(listActivity);
-            }
-        });
-        vh.circleJordan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
-                listActivity.putExtra("Brand", "Jordan");
                 //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }

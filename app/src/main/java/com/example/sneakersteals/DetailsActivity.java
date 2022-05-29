@@ -61,7 +61,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
-        vh.sizeTextView.setText(currentShoe.getSizeList().toString());
+        vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
     }
 
 
