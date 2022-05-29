@@ -171,62 +171,37 @@
         tools:ignore="HardcodedText" />
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/pumalogo"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_below="@id/NikeClouds"
-        android:src="@drawable/jordansclouds"
-        android:layout_marginTop="40dp"
-        android:paddingStart="5dp"
-        android:id="@+id/jordanImage"
-
-        app:civ_border_color="#C2F0E8"
-        app:civ_border_width="2dp"/>
-        <TextView
-        android:id="@+id/jordanText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/NikeClouds"
-        android:gravity="left"
-        android:paddingLeft="45dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Jordans"
-        android:textAlignment="gravity"
-        android:textColor="#C2F0E8"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:layout_alignBottom="@id/jordanText"
-        android:layout_alignRight="@id/jordanText"
-        android:layout_alignBaseline="@id/jordanText"
-        android:paddingStart="100dp"
-        android:id="@+id/pumaImage"
+        android:layout_below="@id/TopPicksShoes"
+        android:layout_centerVertical="@id/adidasText"
+        android:layout_marginBottom="2dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="200dp"
+        android:layout_alignRight="@id/adidasText"
 
         android:src="@drawable/pumalogo"
         app:civ_border_color="#C2F0E8"
 
         app:civ_border_width="2dp"
-        tools:ignore="RtlSymmetry" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/adidasclouds"
-            android:layout_marginLeft="270dp"
-            android:fontFamily="@font/montserrat_alternates_medium"
-            android:gravity="right"
-            android:paddingRight="55dp"
-            android:text="Puma"
-            android:textAlignment="gravity"
-            android:textColor="#C2F0E8"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            tools:ignore="HardcodedText">
-        </TextView>
+        tools:ignore="RtlSymmetry"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="169dp"
+        android:layout_marginTop="300dp"
+
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:gravity="right"
+        android:paddingRight="55dp"
+        android:text="Puma"
+        android:textAlignment="gravity"
+        android:textColor="#C2F0E8"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"/>
 
 
 

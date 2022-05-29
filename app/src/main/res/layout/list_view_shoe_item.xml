@@ -17,6 +17,7 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginRight="10dp"
             android:id="@+id/category_listview_icon"
             android:adjustViewBounds="true"
             android:src="@drawable/nike_af1_1"
@@ -26,11 +27,13 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:id="@+id/category_listview_text"
+            android:fontFamily="@font/montserrat_alternates_medium"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:textColor="#C2F0E8"
             android:text="Nike Air Force 1"
             android:textSize="24sp" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         public ViewHolder() {
             circleNike = findViewById(R.id.NikeClouds);
             circleAdidas = findViewById(R.id.adidasclouds);
-            circlePuma = findViewById(R.id.pumaImage);
+            circlePuma = findViewById(R.id.pumalogo);
             searchView = findViewById(R.id.searchview);
             topPicks = findViewById(R.id.recyclerview);
         }

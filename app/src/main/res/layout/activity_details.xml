@@ -12,13 +12,16 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"/>
+            android:layout_height="300dp"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello"
+            android:fontFamily="@font/montserrat_alternates_medium"
             android:textSize="20dp"
+            android:paddingLeft="100dp"
             android:textColor="#C2F0E8"
             android:id="@+id/details_name"
             android:textStyle="bold">
@@ -29,12 +32,14 @@
             android:layout_height="wrap_content"
             android:text="Description"
             android:textColor="#C2F0E8"
+            android:fontFamily="@font/montserrat_alternates_medium"
             android:id="@+id/details_description"
             android:textSize="16dp">
 
         </TextView>
 
         <TextView
+            android:fontFamily="@font/montserrat_alternates_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
@@ -44,6 +49,18 @@
             android:textSize="16dp">
 
         </TextView>
+
+        <TextView
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:id="@+id/details_colour"
+            android:text="Colour:"
+            android:textColor="#C2F0E8">
+
+        </TextView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
 
