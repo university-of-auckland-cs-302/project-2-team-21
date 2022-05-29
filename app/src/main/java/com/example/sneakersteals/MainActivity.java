@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager
