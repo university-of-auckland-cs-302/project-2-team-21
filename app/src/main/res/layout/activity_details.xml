@@ -8,15 +8,10 @@
     tools:context=".DetailsActivity">
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/details_image"
-            android:layout_margin="14dp"
-            android:src="@drawable/shoes">
-
-
-        </ImageView>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
 
         <TextView
             android:layout_width="wrap_content"
