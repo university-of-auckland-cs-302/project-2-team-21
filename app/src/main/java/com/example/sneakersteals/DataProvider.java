@@ -5,6 +5,7 @@ import com.example.sneakersteals.Models.Shoe;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class DataProvider {
@@ -168,10 +169,10 @@ public class DataProvider {
 
     public List<Shoe> getSearchShoes(String input) {
         List<Shoe> shoeList = new LinkedList<Shoe>();
-        input.toLowerCase();
+        String searchable = input.toLowerCase();
         for (int i = 0; i < 10 ; i++) {
             Shoe currentShoe = this.shoeList.get(i);
-            if (currentShoe.getName().toLowerCase().contains(input)) {
+            if (currentShoe.getName().toLowerCase().contains(searchable)) {
                 shoeList.add(currentShoe);
             }
         }

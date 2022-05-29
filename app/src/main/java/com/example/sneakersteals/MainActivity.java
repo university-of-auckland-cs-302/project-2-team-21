@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
     class ViewHolder {
         CardView cardviewNike;
         CardView cardviewAddidas;
-        CardView cardViewPuma;
+        CardView cardviewPuma;
         SearchView searchView;
         RecyclerView topPicks;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             cardviewAddidas = findViewById(R.id.cardview_addidas);
             searchView = findViewById(R.id.searchView);
             topPicks = findViewById(R.id.recyclerview);
-            cardViewPuma = findViewById(R.id.cardview_puma);
+            cardviewPuma = findViewById(R.id.cardview_puma);
         }
     }
 
