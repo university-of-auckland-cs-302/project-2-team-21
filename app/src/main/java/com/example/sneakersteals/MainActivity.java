@@ -6,15 +6,18 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sneakersteals.Adaptors.ShoeAdaptor;
 import com.example.sneakersteals.Adaptors.TopPicksAdaptor;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.ItemClickListener {
+
 
     class ViewHolder {
         CardView cardviewNike;
@@ -37,11 +40,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 
         vh = new ViewHolder();
 
         TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, DataProvider.getTopPicks("Shoe"));
-
+        recyclerView.setLayoutManager(layoutManager);
+        //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
 
         vh.cardviewNike.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +84,28 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
+        topPicksAdaptor.setClickListener(new TopPicksAdaptor.ItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                TextView myTextView = (TextView) view.findViewById(R.id.category_listview_text);
+                String selectedName = myTextView.getText().toString();
+                Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
+                nextActivity.putExtra("Name", selectedName);
+                startActivity(nextActivity);
+            }
+        });
+
     }
+    @Override
+    public void onItemClick(View view, int position) {
+        TextView myTextView = (TextView) view.findViewById(R.id.category_listview_text);
+        String selectedName = myTextView.getText().toString();
+        Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
+        nextActivity.putExtra("Name", selectedName);
+        startActivity(nextActivity);
+    }
+
+
 
 }

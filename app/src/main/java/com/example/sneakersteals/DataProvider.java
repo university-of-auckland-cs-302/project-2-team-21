@@ -177,9 +177,9 @@ public class DataProvider {
         input.toLowerCase();
         for (int i = 1; i < 11 ; i++) {
             Shoe currentShoe = generateShoe(i);
-            if (currentShoe.getName().toLowerCase().contains(input)) {
-                shoeList.add(currentShoe);
-            }
+
+            shoeList.add(currentShoe);
+
         }
         return shoeList;
     }
