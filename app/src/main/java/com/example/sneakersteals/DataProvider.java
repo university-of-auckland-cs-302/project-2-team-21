@@ -23,7 +23,7 @@ public class DataProvider {
         // with id = 1 as an example
         if (id == 1) {
             name = "Shoe 1";
-            brand = "Addidas";
+            brand = "Adidas";
             description = "placeholder description";
             colourList.add("Blue");
             colourList.add("White");
@@ -177,6 +177,8 @@ public class DataProvider {
             } else if (currentShoe.getDescription().toLowerCase().contains(searchable)) {
                 shoeList.add(currentShoe);
             } else if (currentShoe.getColourList().toString().toLowerCase().contains(searchable)) {
+                shoeList.add(currentShoe);
+            } else if (currentShoe.getBrand().toLowerCase().contains(searchable)) {
                 shoeList.add(currentShoe);
             }
         }
