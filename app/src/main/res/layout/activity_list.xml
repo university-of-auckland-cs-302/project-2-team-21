@@ -10,6 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="No results found"
+        android:textColor="#C2F0E8"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:textAlignment="center"
         android:id="@+id/no_results_text"
         android:textSize="24dp"
         android:visibility="invisible" >

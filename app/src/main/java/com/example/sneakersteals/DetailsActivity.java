@@ -19,7 +19,7 @@ import com.example.sneakersteals.Models.Shoe;
 public class DetailsActivity extends AppCompatActivity {
 
     class ViewHolder {
-        TextView nameTextView, descriptionTextView, sizeTextView;
+        TextView nameTextView, descriptionTextView, sizeTextView, colourTextView;
         ImageView shoeImageView;
         ViewPager mViewPager;
 
@@ -29,6 +29,7 @@ public class DetailsActivity extends AppCompatActivity {
             sizeTextView = findViewById(R.id.details_size);
             shoeImageView = findViewById(R.id.imageView);
             mViewPager = findViewById(R.id.viewPager);
+            colourTextView = findViewById(R.id.details_colour);
         }
     }
 
@@ -62,7 +63,7 @@ public class DetailsActivity extends AppCompatActivity {
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
         vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
-       // vh.sizeTextView.setText("Colours available: ");
+        vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
     }
 
 
