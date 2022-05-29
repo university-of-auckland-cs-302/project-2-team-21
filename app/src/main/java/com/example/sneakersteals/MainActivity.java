@@ -11,31 +11,38 @@ import android.widget.TextView;
 
 import androidx.appcompat.widget.SearchView;
 import androidx.cardview.widget.CardView;
+import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sneakersteals.Adaptors.ShoeAdaptor;
 import com.example.sneakersteals.Adaptors.TopPicksAdaptor;
+import com.example.sneakersteals.databinding.ActivityMainBinding;
+
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.ItemClickListener {
 
 
     class ViewHolder {
-        CardView cardviewNike;
-        CardView cardviewAddidas;
-        CardView cardviewPuma;
+        CircleImageView circleNike;
+        CircleImageView circleAdidas;
+        CircleImageView circleJordan;
+        CircleImageView circlePuma;
         SearchView searchView;
         RecyclerView topPicks;
 
         public ViewHolder() {
-            cardviewNike = findViewById(R.id.cardview_nike);
-            cardviewAddidas = findViewById(R.id.cardview_addidas);
-            searchView = findViewById(R.id.searchView);
+            circleNike = findViewById(R.id.NikeClouds);
+            circleAdidas = findViewById(R.id.adidasclouds);
+            circleJordan = findViewById(R.id.jordanImage);
+            circlePuma = findViewById(R.id.pumaImage);
+            searchView = findViewById(R.id.searchview);
             topPicks = findViewById(R.id.recyclerview);
-            cardviewPuma = findViewById(R.id.cardview_puma);
         }
     }
 
@@ -65,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
 
-        vh.cardviewNike.setOnClickListener(new View.OnClickListener() {
+        vh.circleNike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
@@ -75,16 +82,25 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             }
         });
 
-        vh.cardviewAddidas.setOnClickListener(new View.OnClickListener() {
+        vh.circleAdidas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
-                listActivity.putExtra("Brand", "Addidas");
+                listActivity.putExtra("Brand", "Adidas");
                 //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
-        vh.cardviewPuma.setOnClickListener(new View.OnClickListener() {
+        vh.circleJordan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
+                listActivity.putExtra("Brand", "Jordan");
+                //listActivity.putExtra("Database", (Parcelable) database);
+                startActivity(listActivity);
+            }
+        });
+        vh.circlePuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);

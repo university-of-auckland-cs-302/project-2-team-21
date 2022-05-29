@@ -1,4 +1,4 @@
-/*package com.example.sneakersteals.Adaptors;
+package com.example.sneakersteals.Adaptors;
 
 import android.content.Context;
 import android.content.Intent;
@@ -51,7 +51,7 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //Get a reference to the current ListView item
-        //View currentListViewItem = convertView;
+        View currentListViewItem = convertView;
 
         // Check if the existing view is being reused, otherwise inflate the view
         if (currentListViewItem == null) {
@@ -103,4 +103,3 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
     }
 
 }
-*/
