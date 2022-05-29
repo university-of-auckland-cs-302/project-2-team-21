@@ -6,6 +6,7 @@ public class Shoe {
     String name, brand, description;
     List<String> colourList, imageFilenameList;
     List<Integer> sizeList;
+    int viewCount;
 
     public Shoe (String name, String brand, String description,
                  List<String> colourList, List<String> imageFilenameList,
@@ -16,6 +17,7 @@ public class Shoe {
         this.colourList = colourList;
         this.imageFilenameList = imageFilenameList;
         this.sizeList = sizeList;
+        this.viewCount = 0;
     }
 
     public String getName() {
@@ -40,5 +42,17 @@ public class Shoe {
 
     public List<Integer> getSizeList() {
         return sizeList;
+    }
+
+    public int getViewCount() {
+        return viewCount;
+    }
+
+    public void setViewCount(int viewCount) {
+        this.viewCount = viewCount;
+    }
+
+    public void incrementViewCount() {
+        this.viewCount++;
     }
 }

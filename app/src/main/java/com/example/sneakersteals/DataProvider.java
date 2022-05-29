@@ -8,6 +8,9 @@ import java.util.List;
 import java.util.Map;
 
 public class DataProvider {
+    public List<Shoe> shoeList = new LinkedList<Shoe>();
+
+
 
     public static Shoe generateShoe(int id) {
         String name, brand, description;
@@ -24,6 +27,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -34,6 +38,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -44,6 +49,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -54,6 +60,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -64,6 +71,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -74,6 +82,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -84,6 +93,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -94,6 +104,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -105,6 +116,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -116,6 +128,7 @@ public class DataProvider {
             colourList.add("Blue");
             colourList.add("White");
             imageFilenameList.add("shoes");
+            imageFilenameList.add("shoes2");
             sizeList.add(8);
             sizeList.add(9);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
@@ -125,22 +138,25 @@ public class DataProvider {
         return generatedShoe;
     }
 
+    public DataProvider() {
+        for (int i = 1; i < 11; i++) {
+            this.shoeList.add(generateShoe(i));
 
-    public static List<Shoe> getShoes() {
-        //This function will provide a list of generated shoe objects.
-        List<Shoe> shoeList = new LinkedList<Shoe>();
-        shoeList.add(generateShoe(1));
-        shoeList.add(generateShoe(2));
-
-
-        return shoeList;
+        }
     }
 
-    public static List<Shoe> getBrandShoes(String brand) {
+
+    public List<Shoe> getShoes() {
+        //This function will provide a list of generated shoe objects.
+
+        return this.shoeList;
+    }
+
+    public List<Shoe> getBrandShoes(String brand) {
         //This function will provide a list of generated shoe objects.
         List<Shoe> shoeList = new LinkedList<Shoe>();
-        for (int i = 1; i < 11 ; i++) {
-            Shoe currentShoe = generateShoe(i);
+        for (int i = 0; i < 10 ; i++) {
+            Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getBrand().equals(brand)) {
                 shoeList.add(currentShoe);
             }
@@ -150,11 +166,11 @@ public class DataProvider {
         return shoeList;
     }
 
-    public static List<Shoe> getSearchShoes(String input) {
+    public List<Shoe> getSearchShoes(String input) {
         List<Shoe> shoeList = new LinkedList<Shoe>();
         input.toLowerCase();
-        for (int i = 1; i < 11 ; i++) {
-            Shoe currentShoe = generateShoe(i);
+        for (int i = 0; i < 10 ; i++) {
+            Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getName().toLowerCase().contains(input)) {
                 shoeList.add(currentShoe);
             }
@@ -162,25 +178,38 @@ public class DataProvider {
         return shoeList;
     }
 
-    public static Shoe getOneShoe(String nameInput) {
-        for (int i = 1; i < 11 ; i++) {
-            Shoe currentShoe = generateShoe(i);
+    public Shoe getOneShoe(String nameInput) {
+        for (int i = 0; i < 10 ; i++) {
+            Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getName().equals(nameInput)) {
+                //global.database.shoeList.get(i).incrementViewCount();
+                //this.shoeList.get(i).incrementViewCount();
                 return currentShoe;
             }
         }
         return null;
     }
 
-    public static List<Shoe> getTopPicks(String input) {
+    public List<Shoe> getTopPicks() {
         List<Shoe> shoeList = new LinkedList<Shoe>();
-        input.toLowerCase();
-        for (int i = 1; i < 11 ; i++) {
-            Shoe currentShoe = generateShoe(i);
+        List<Shoe> searchList = new ArrayList<Shoe>(this.shoeList);
+        for (int count = 0; count < 3; count++) {
+            int maxIndex = 0;
+            int maxViewCount = 0;
 
-            shoeList.add(currentShoe);
+            for (int i = 0; i < searchList.size() ; i++) {
+                Shoe currentShoe = searchList.get(i);
+                if (currentShoe.getViewCount() > maxViewCount){
+                    maxIndex = i;
+                    maxViewCount = currentShoe.getViewCount();
+                }
 
+
+
+            }
+            shoeList.add(searchList.remove(maxIndex));
         }
+
         return shoeList;
     }
 }

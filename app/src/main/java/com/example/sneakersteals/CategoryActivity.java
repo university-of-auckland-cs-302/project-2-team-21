@@ -2,6 +2,7 @@ package com.example.sneakersteals;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -33,15 +34,17 @@ public class CategoryActivity extends AppCompatActivity {
             //Get the intent (Which brand to display)
             String brand = getIntent().getStringExtra("Brand");
             String searchInput = getIntent().getStringExtra("Search Term");
+            Singleton global=Singleton.getInstance();
+            DataProvider database = global.getDatabase();
 
             vh = new ViewHolder();
             //Check which intent to use.
             if (searchInput == null) {
-                ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, DataProvider.getBrandShoes(brand));
+                ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getBrandShoes(brand));
 
                 listView.setAdapter(shoeAdaptor);
             } else if (brand == null) {
-                ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, DataProvider.getSearchShoes(searchInput));
+                ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
                 listView.setAdapter(shoeAdaptor);
 
 
@@ -55,6 +58,7 @@ public class CategoryActivity extends AppCompatActivity {
                     String selectedName = myTextView.getText().toString();
                     Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                     nextActivity.putExtra("Name", selectedName);
+                    //nextActivity.putExtra("Database", (Parcelable) database);
                     startActivity(nextActivity);
                 }
             });

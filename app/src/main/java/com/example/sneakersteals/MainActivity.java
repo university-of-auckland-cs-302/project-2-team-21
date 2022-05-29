@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
     class ViewHolder {
         CardView cardviewNike;
         CardView cardviewAddidas;
+        CardView cardViewPuma;
         SearchView searchView;
         RecyclerView topPicks;
 
@@ -30,10 +32,15 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             cardviewAddidas = findViewById(R.id.cardview_addidas);
             searchView = findViewById(R.id.searchView);
             topPicks = findViewById(R.id.recyclerview);
+            cardViewPuma = findViewById(R.id.cardview_puma);
         }
     }
 
     ViewHolder vh;
+
+    Singleton global=Singleton.getInstance();
+    DataProvider database = global.getDatabase();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +49,10 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-
+        //((SneakSteals) this.getApplication()).initialize();
         vh = new ViewHolder();
 
-        TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, DataProvider.getTopPicks("Shoe"));
+        TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, database.getTopPicks());
         recyclerView.setLayoutManager(layoutManager);
         //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
@@ -55,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Nike");
+                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
@@ -64,6 +72,16 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Addidas");
+                //listActivity.putExtra("Database", (Parcelable) database);
+                startActivity(listActivity);
+            }
+        });
+        vh.cardviewPuma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
+                listActivity.putExtra("Brand", "Puma");
+                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
@@ -73,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
             public boolean onQueryTextSubmit(String query) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Search Term", query);
+                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
                 return false;
             }
@@ -92,17 +111,48 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
                 String selectedName = myTextView.getText().toString();
                 Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                 nextActivity.putExtra("Name", selectedName);
+               // nextActivity.putExtra("Database", (Parcelable) database);
                 startActivity(nextActivity);
             }
         });
 
     }
+
+    //Update the top picks section
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerview);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+
+        TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, database.getTopPicks());
+        recyclerView.setLayoutManager(layoutManager);
+        //TopPicksAdaptor.setClickListener(this);
+        recyclerView.setAdapter(topPicksAdaptor);
+
+
+        topPicksAdaptor.setClickListener(new TopPicksAdaptor.ItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                TextView myTextView = (TextView) view.findViewById(R.id.category_listview_text);
+                String selectedName = myTextView.getText().toString();
+                Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
+                nextActivity.putExtra("Name", selectedName);
+                // nextActivity.putExtra("Database", (Parcelable) database);
+                startActivity(nextActivity);
+            }
+        });
+    }
+
     @Override
     public void onItemClick(View view, int position) {
         TextView myTextView = (TextView) view.findViewById(R.id.category_listview_text);
         String selectedName = myTextView.getText().toString();
         Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
         nextActivity.putExtra("Name", selectedName);
+       // nextActivity.putExtra("Database", (Parcelable) database);
         startActivity(nextActivity);
     }
 

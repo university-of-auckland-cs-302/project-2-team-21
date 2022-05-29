@@ -39,6 +39,22 @@
         </TextView>
 
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview_puma"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puma" >
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.appcompat.widget.SearchView
         android:layout_width="match_parent"

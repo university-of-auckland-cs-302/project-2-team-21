@@ -1,8 +1,8 @@
 package com.example.sneakersteals;
 
-import static com.example.sneakersteals.DataProvider.getOneShoe;
 
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,9 +36,13 @@ public class DetailsActivity extends AppCompatActivity {
 
         vh = new DetailsActivity.ViewHolder();
 
+        Singleton global=Singleton.getInstance();
+        DataProvider database = global.getDatabase();
+
 
         String selectedName = getIntent().getStringExtra("Name");
-        Shoe currentShoe = getOneShoe(selectedName);
+        Shoe currentShoe = database.getOneShoe(selectedName);
+        global.incrementViewCount(currentShoe);
 
 
         vh.nameTextView.setText(currentShoe.getName());
