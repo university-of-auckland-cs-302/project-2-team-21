@@ -59,18 +59,19 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
         }
 
         ViewHolder vh = new ViewHolder(currentListViewItem);
-        //Get the Number object for the current position
-        Shoe currentShoe = mShoes.get(position);
 
-        //Set the attributed of list_view_number_item views
 
-        int i = mContext.getResources().getIdentifier(
-                currentShoe.getImageFilenameList().get(0), "drawable",
-                mContext.getPackageName());
-        vh.shoeTextView.setText(currentShoe.getName());
-        //Setting the icon\
-        vh.shoeImageView.setImageResource(i);
+            //Get the Number object for the current position
+            Shoe currentShoe = mShoes.get(position);
 
+            //Set the attributed of list_view_number_item views
+
+            int i = mContext.getResources().getIdentifier(
+                    currentShoe.getImageFilenameList().get(0), "drawable",
+                    mContext.getPackageName());
+            vh.shoeTextView.setText(currentShoe.getName());
+            //Setting the icon\
+            vh.shoeImageView.setImageResource(i);
 
         //iconImageView.setImageResource(i);
 

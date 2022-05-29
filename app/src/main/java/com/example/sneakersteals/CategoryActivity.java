@@ -1,5 +1,7 @@
 package com.example.sneakersteals;
 
+import static android.view.View.VISIBLE;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -11,13 +13,18 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.sneakersteals.Adaptors.ShoeAdaptor;
+import com.example.sneakersteals.Models.Shoe;
+
+import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
 
+
+
         class ViewHolder {
-
+            TextView noResults;
             public ViewHolder() {
-
+                noResults = findViewById(R.id.no_results_text);
             }
         }
 
@@ -38,6 +45,8 @@ public class CategoryActivity extends AppCompatActivity {
             Singleton global=Singleton.getInstance();
             DataProvider database = global.getDatabase();
 
+
+
             vh = new ViewHolder();
             //Check which intent to use.
             if (searchInput == null) {
@@ -45,9 +54,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                 listView.setAdapter(shoeAdaptor);
             } else if (brand == null) {
-                ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
-                listView.setAdapter(shoeAdaptor);
-
+                List<Shoe> searchedShoes = database.getSearchShoes(searchInput);
+                if (searchedShoes.size() > 0) {
+                    ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
+                    listView.setAdapter(shoeAdaptor);
+                } else {
+                    vh.noResults.setVisibility(VISIBLE);
+                }
 
             }
 

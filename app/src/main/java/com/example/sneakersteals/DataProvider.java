@@ -174,6 +174,10 @@ public class DataProvider {
             Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getName().toLowerCase().contains(searchable)) {
                 shoeList.add(currentShoe);
+            } else if (currentShoe.getDescription().toLowerCase().contains(searchable)) {
+                shoeList.add(currentShoe);
+            } else if (currentShoe.getColourList().toString().toLowerCase().contains(searchable)) {
+                shoeList.add(currentShoe);
             }
         }
         return shoeList;
