@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Hello"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:paddingLeft="100dp"
             android:textColor="#C2F0E8"
             android:id="@+id/details_name"
@@ -32,6 +32,8 @@
             android:layout_height="wrap_content"
             android:text="Description"
             android:textColor="#C2F0E8"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/montserrat_alternates_medium"
             android:id="@+id/details_description"
             android:textSize="16dp">
@@ -42,11 +44,11 @@
             android:fontFamily="@font/montserrat_alternates_medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="90dp"
             android:id="@+id/details_size"
             android:text="Sizes:"
             android:textColor="#C2F0E8"
-            android:textSize="16dp">
+            android:textSize="20dp">
 
         </TextView>
 
@@ -57,7 +59,8 @@
             android:layout_marginTop="80dp"
             android:id="@+id/details_colour"
             android:text="Colour:"
-            android:textColor="#C2F0E8">
+            android:textColor="#C2F0E8"
+            android:textSize="20dp">
 
         </TextView>
 
