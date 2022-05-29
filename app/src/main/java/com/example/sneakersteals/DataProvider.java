@@ -1,4 +1,4 @@
-package com.example.sneakersteals;
+/*package com.example.sneakersteals;
 
 import com.example.sneakersteals.Models.Shoe;
 
@@ -220,3 +220,4 @@ public class DataProvider {
         return shoeList;
     }
 }
+*/

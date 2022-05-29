@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sneakersteals.Adaptors.ShoeAdaptor;
 import com.example.sneakersteals.Adaptors.TopPicksAdaptor;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.ItemClickListener {
 
@@ -38,9 +41,13 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
 
     ViewHolder vh;
 
+
     Singleton global=Singleton.getInstance();
     DataProvider database = global.getDatabase();
 
+    private AppBarConfiguration appBarConfiguration;
+    private ActivityMainBinding binding;
+    private ImageView supportActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -157,6 +164,9 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         startActivity(nextActivity);
     }
 
+    public void setSupportActionBar(ImageView supportActionBar) {
+        this.supportActionBar = supportActionBar;
+    }
 
 
 }
