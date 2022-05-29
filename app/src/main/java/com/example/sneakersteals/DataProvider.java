@@ -25,6 +25,7 @@ public class DataProvider {
             imageFilenameList.add("nike_af1_3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 2) {
             name = "Nike Air Max 95 EC";
@@ -37,6 +38,8 @@ public class DataProvider {
             imageFilenameList.add("nike95ec3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 3) {
             name = "Nike Air Max 97";
@@ -49,6 +52,8 @@ public class DataProvider {
             imageFilenameList.add("nike97_3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 4) {
             name = "Nike Dunk Low";
@@ -61,6 +66,8 @@ public class DataProvider {
             imageFilenameList.add("nikedl3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 5) {
             name = "Nike Air Presto";
@@ -73,6 +80,8 @@ public class DataProvider {
             imageFilenameList.add("nikepresto3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 6) {
             name = "Nike Waffle One";
@@ -85,6 +94,8 @@ public class DataProvider {
             imageFilenameList.add("nikewaffle3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }  else if (id == 7) {
             name = "Nike Wearallday";
@@ -95,8 +106,9 @@ public class DataProvider {
             imageFilenameList.add("nikewear");
             imageFilenameList.add("nikewear2");
             imageFilenameList.add("nikewear3");
-            sizeList.add(8);
-            sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         } else if (id == 8) {
             name = "Nike Air Max Invigor Print";
@@ -108,6 +120,7 @@ public class DataProvider {
             imageFilenameList.add("nikeinvigor3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }
         else if (id == 9) {
@@ -119,8 +132,9 @@ public class DataProvider {
             imageFilenameList.add("nikeventure");
             imageFilenameList.add("nikeventure2");
             imageFilenameList.add("nikeventure3");
-            sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }
         else if (id == 10) {
@@ -133,6 +147,8 @@ public class DataProvider {
             imageFilenameList.add("nikecourt3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }
         else if (id == 11) {
@@ -145,6 +161,8 @@ public class DataProvider {
             imageFilenameList.add("ad_ss3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 12) {
             name = "Swift Run X";
@@ -158,6 +176,8 @@ public class DataProvider {
             imageFilenameList.add("ad_srx3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 13) {
             name = "NMD R1 Primeblue";
@@ -170,7 +190,9 @@ public class DataProvider {
             imageFilenameList.add("nmd2");
             imageFilenameList.add("nmd3");
             sizeList.add(8);
-            sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 14) {
             name = "ZX 2K Boost";
@@ -183,6 +205,8 @@ public class DataProvider {
             imageFilenameList.add("zx3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 15) {
             name = "4D Fusio";
@@ -196,6 +220,8 @@ public class DataProvider {
             imageFilenameList.add("ad4d3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 16) {
             name = "Superstar";
@@ -206,8 +232,10 @@ public class DataProvider {
             imageFilenameList.add("ss");
             imageFilenameList.add("ss2");
             imageFilenameList.add("ss3");
-            sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 17) {
             name = "NMD 360";
@@ -219,6 +247,7 @@ public class DataProvider {
             imageFilenameList.add("nmd360_3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 18) {
             name = "Gazelle";
@@ -231,6 +260,7 @@ public class DataProvider {
             imageFilenameList.add("gazelle3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 19) {
             name = "Nizza Platform";
@@ -244,6 +274,8 @@ public class DataProvider {
             imageFilenameList.add("nizza3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 20) {
             name = "Forum Exhibit Low";
@@ -254,118 +286,152 @@ public class DataProvider {
             imageFilenameList.add("forum");
             imageFilenameList.add("forum");
             imageFilenameList.add("forum");
-            sizeList.add(8);
-            sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 21) {
-            name = "Zion I";
+            name = "Eternity Nitro";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
+            description = "The ideal performance running shoe for those needing added stability and support.";
+            colourList.add("Black");
             colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            imageFilenameList.add("pumanitro");
+            imageFilenameList.add("pumanitro2");
+            imageFilenameList.add("pumanitro3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 22) {
-            name = "Stan Smith";
+            name = "Basket Classic XII";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
+            description = "A true classic is timeless – and the enduring style of the low-cut Basket silhouette is a case in point.";
             colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            colourList.add("Black");
+            imageFilenameList.add("basket");
+            imageFilenameList.add("basket2");
+            imageFilenameList.add("basket3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 23) {
-            name = "Stan Smith";
+            name = "Wild Rider";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
-            colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            description = "Pick up the pace with the new Wild Rider. An athletic mesh upper with suede overlays gives a sporty dimension to this bold new silhouette, with an exaggerated sole design and layered Formstrip detail.";
+            colourList.add("Red");
+            colourList.add("Cream");
+            imageFilenameList.add("wildrider");
+            imageFilenameList.add("wildrider2");
+            imageFilenameList.add("wildrider3");
             sizeList.add(8);
-            sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 24) {
-            name = "Stan Smith";
+            name = "Suede Classic XXI";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
-            colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            description = "With its huge impact on footwear culture, PUMA's most iconic trainer first hit the scene in 1968 and has been worn by icons of every generation since.";
+            colourList.add("Red");
+            colourList.add("Black");
+            colourList.add("Blue");
+            colourList.add("Yellow");
+            imageFilenameList.add("suede");
+            imageFilenameList.add("suede2");
+            imageFilenameList.add("suede3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 25) {
-            name = "Stan Smith";
+            name = "Puma X Batman";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
-            colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            description = "This season, PUMA joins forces with a pop culture icon to create a truly heroic collection: launching with the release of the new Batman film, the PUMA x BATMAN Suede Classic Sneakers bring to life the essence of the story.";
+            colourList.add("Black");
+            imageFilenameList.add("batman");
+            imageFilenameList.add("batman2");
+            imageFilenameList.add("batman3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 26) {
-            name = "Stan Smith";
+            name = "Cell Vive";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
-            colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            description = "Runners rejoice: ultra-supportive shoes with street-ready style do exist.";
+            colourList.add("Black");
+            colourList.add("Red");
+            imageFilenameList.add("cell");
+            imageFilenameList.add("cell2");
+            imageFilenameList.add("cell3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 27) {
-            name = "Stan Smith";
+            name = "Axelion Block";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
+            description = "Be bold in the game-changing silhouette of our Axelion Block Running Shoes, which combine contemporary design with the supreme comfort of our foam heel unit for the last word in athletic style.";
             colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            colourList.add("Black");
+            imageFilenameList.add("axelion");
+            imageFilenameList.add("axelion2");
+            imageFilenameList.add("axelion3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 28) {
-            name = "Stan Smith";
+            name = "CA Pro Nylon WS";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
+            description = "The first thing you notice about these sneakers is their clean and winter-ready look. This is achieved through clever use of various leather and textile materials, along with the moulded details on the toe box.";
+            colourList.add("Black");
             colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
-            sizeList.add(8);
+            imageFilenameList.add("capro");
+            imageFilenameList.add("capro2");
+            imageFilenameList.add("capro3");
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 29) {
-            name = "Stan Smith";
+            name = "Retaliate Block";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
+            description = "Say hello to the all-new Retaliate Block Men’s Running Shoe. This contemporary model packs a punch with bold PUMA branding and a streetstyle aesthetic while still delivering on the performance you’d expect from a PUMA essential.";
             colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            colourList.add("Black");
+            imageFilenameList.add("retaliate");
+            imageFilenameList.add("retaliate2");
+            imageFilenameList.add("retaliate3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(11);
+            sizeList.add(12);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }else if (id == 30) {
-            name = "Stan Smith";
+            name = "Softride Vital";
             brand = "Puma";
-            description = "The adidas Stan Smith trainer is timeless. Iconic. Its crisp white upper and effortless style never lose their charm.";
-            colourList.add("White");
-            imageFilenameList.add("ad_ss");
-            imageFilenameList.add("ad_ss2");
-            imageFilenameList.add("ad_ss3");
+            description = "The SOFTRIDE Vital running shoes are designed to keep up with your pace, wherever the day takes you.";
+            colourList.add("Black");
+            colourList.add("Cream");
+            imageFilenameList.add("softride");
+            imageFilenameList.add("softride2");
+            imageFilenameList.add("softride3");
             sizeList.add(8);
             sizeList.add(9);
+            sizeList.add(10);
+            sizeList.add(11);
             generatedShoe = new Shoe(name, brand, description, colourList, imageFilenameList, sizeList);
         }
         return generatedShoe;
