@@ -20,6 +20,8 @@ import com.example.sneakersteals.R;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class ShoeAdaptor extends ArrayAdapter<Shoe> {
 
@@ -29,12 +31,12 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
 
     class ViewHolder {
         TextView shoeTextView;
-        ImageView shoeImageView;
         CardView shoeCardView;
+        CircleImageView shoeImageView;
 
         public ViewHolder(View currentView) {
             shoeTextView = (TextView) currentView.findViewById(R.id.category_listview_text);
-            shoeImageView = (ImageView) currentView.findViewById(R.id.category_listview_icon);
+            shoeImageView =  currentView.findViewById(R.id.category_listview_icon);
             shoeCardView = (CardView) currentView.findViewById(R.id.category_listview_card);
         }
     }
