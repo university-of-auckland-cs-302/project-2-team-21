@@ -66,6 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_below="@id/TopPicks"
         android:id="@+id/recyclerview" >
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -82,7 +83,7 @@
 <!--            android:layout_height="80dp"-->
 <!--            android:src="@drawable/displayshoe"-->
 <!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="10dp" />-->
+<!--            android:layout_marginStart="5dp" />-->
 
 <!--        <ImageView-->
 <!--            android:background="@drawable/custom_shoeborder"-->
@@ -90,7 +91,7 @@
 <!--            android:layout_height="80dp"-->
 <!--            android:src="@drawable/displayshoe"-->
 <!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="10dp" />-->
+<!--            android:layout_marginStart="5dp" />-->
 
 <!--        <ImageView-->
 <!--            android:background="@drawable/custom_shoeborder"-->
@@ -98,7 +99,7 @@
 <!--            android:layout_height="80dp"-->
 <!--            android:src="@drawable/displayshoe"-->
 <!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="10dp"/>-->
+<!--            android:layout_marginStart="5dp"/>-->
 
 
     </LinearLayout>
