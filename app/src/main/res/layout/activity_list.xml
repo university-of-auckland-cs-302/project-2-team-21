@@ -3,14 +3,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#323B5A"
+    android:background="#C9CFE1"
     android:orientation="vertical" >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="No results found"
-        android:textColor="#C2F0E8"
+        android:textColor="#FFFFFF"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/montserrat_alternates_medium"
         android:textAlignment="center"
@@ -27,7 +27,8 @@
     android:layout_weight="1"
     android:layout_margin="10dp"
     android:dividerHeight="10sp"
-    android:divider="@color/design_default_color_secondary"
+
+
     />
 
 

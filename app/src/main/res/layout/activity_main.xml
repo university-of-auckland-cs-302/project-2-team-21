@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:background="#323B5A"
+    android:background="#C9CFE1"
     android:layout_width="wrap_content">
 
     <LinearLayout
@@ -47,7 +47,7 @@
         android:fontFamily="@font/montserrat_alternates_medium"
         android:text="Top Picks"
         android:textAlignment="center"
-        android:textColor="#C2F0E8"
+        android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
@@ -112,7 +112,7 @@
         android:layout_marginTop="50dp"
         android:paddingStart="5dp"
 
-        app:civ_border_color="#C2F0E8"
+        app:civ_border_color="#FFFF"
         app:civ_border_width="2dp"
 
         tools:ignore="RtlSymmetry" />
@@ -125,7 +125,7 @@
         android:text="Nike"
         android:layout_below="@id/TopPicksShoes"
         android:textAlignment="gravity"
-        android:textColor="#C2F0E8"
+        android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,RtlSymmetry" />
@@ -141,7 +141,7 @@
         android:layout_alignRight="@id/adidasText"
 
         android:src="@drawable/adidasclouds"
-        app:civ_border_color="#C2F0E8"
+        app:civ_border_color="#FFFF"
 
         app:civ_border_width="2dp"
         tools:ignore="RtlSymmetry" />
@@ -158,7 +158,7 @@
 
         android:text="Adidas"
         android:textAlignment="gravity"
-        android:textColor="#C2F0E8"
+        android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
@@ -175,7 +175,7 @@
         android:layout_alignRight="@id/adidasText"
 
         android:src="@drawable/pumalogo"
-        app:civ_border_color="#C2F0E8"
+        app:civ_border_color="#000000"
 
         app:civ_border_width="2dp"
         tools:ignore="RtlSymmetry"/>
@@ -191,7 +191,7 @@
         android:paddingRight="55dp"
         android:text="Puma"
         android:textAlignment="gravity"
-        android:textColor="#C2F0E8"
+        android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText"/>
