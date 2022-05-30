@@ -9,11 +9,12 @@
     tools:context=".DetailsActivity">
 
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="wrap_content"
-            android:layout_height="300dp"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+                <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" >
+                </androidx.viewpager.widget.ViewPager>
 
         <TextView
             android:layout_width="match_parent"
