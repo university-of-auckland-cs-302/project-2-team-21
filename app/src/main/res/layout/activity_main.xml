@@ -140,12 +140,11 @@
         android:layout_below="@id/pumatext"
         android:layout_centerVertical="@id/adidasText"
         android:layout_marginBottom="2dp"
-        android:layout_marginRight="100dp"
-
+        android:layout_centerHorizontal="true"
         android:layout_alignRight="@id/adidasText"
 
         android:src="@drawable/pumalogo"
-        app:civ_border_color="#000000"
+        app:civ_border_color="#FFFF"
 
         app:civ_border_width="2dp"
         tools:ignore="RtlSymmetry"/>
