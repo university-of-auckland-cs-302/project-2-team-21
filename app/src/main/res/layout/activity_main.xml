@@ -15,24 +15,26 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
+            android:padding="5dp"
             android:src="@drawable/logo"
             app:civ_border_color="@color/black"
             app:civ_border_width="2dp"
             android:paddingStart="10dp"
             tools:ignore="RtlSymmetry" />
+
         <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchview"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
             app:queryHint="Search for shoes..."
             android:inputType="text"
             android:minHeight="45dp"
-            android:id="@+id/searchview"
             android:textColorHint="#C2F0E8"
             tools:ignore="HardcodedText"
-            android:submitBackground="@drawable/rounded_searchview"
-            android:background="@drawable/rounded_searchview"/>
+            android:background="@drawable/rounded_searchview"
+            android:backgroundTintMode="multiply"
+            />
 
 
     </LinearLayout>

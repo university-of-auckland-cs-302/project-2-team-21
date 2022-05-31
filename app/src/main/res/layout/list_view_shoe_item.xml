@@ -7,7 +7,7 @@
     android:background="#C9CFE1"
     android:id="@+id/category_listview_card"
     app:cardBackgroundColor="@android:color/transparent"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="0dp">
 
     <TextView
