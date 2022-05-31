@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,8 +24,12 @@ public class CategoryActivity extends AppCompatActivity {
 
         class ViewHolder {
             TextView noResults;
+            TextView bannerText;
+            ImageButton returnButton;
             public ViewHolder() {
                 noResults = findViewById(R.id.no_results_text);
+                bannerText = findViewById(R.id.listview_header);
+                returnButton = findViewById(R.id.back_button);
             }
         }
 
@@ -48,23 +53,33 @@ public class CategoryActivity extends AppCompatActivity {
 
 
             vh = new ViewHolder();
-            //Check which intent to use.
+            //Check which intent to use
             if (searchInput == null) {
                 ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getBrandShoes(brand));
 
                 listView.setAdapter(shoeAdaptor);
+                String mBannerText = "Showing " + brand + " shoes";
+                vh.bannerText.setText(mBannerText);
             } else if (brand == null) {
                 List<Shoe> searchedShoes = database.getSearchShoes(searchInput);
+                String mBannerText = "Showing results for: " + searchInput;
+                vh.bannerText.setText(mBannerText);
                 if (searchedShoes.size() > 0) {
                     ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
                     listView.setAdapter(shoeAdaptor);
                 } else {
-                    vh.noResults.setVisibility(VISIBLE);
+                    //vh.noResults.setVisibility(VISIBLE);
                 }
 
             }
 
-
+            vh.returnButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent previousActivity = new Intent(getBaseContext(), MainActivity.class);
+                    startActivity(previousActivity);
+                }
+            });
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
