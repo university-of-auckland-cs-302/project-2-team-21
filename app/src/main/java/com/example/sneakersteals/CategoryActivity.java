@@ -76,8 +76,9 @@ public class CategoryActivity extends AppCompatActivity {
             vh.returnButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent previousActivity = new Intent(getBaseContext(), MainActivity.class);
-                    startActivity(previousActivity);
+                    //Return to previous activity with transition
+                    finish();
+                    overridePendingTransition(R.anim.fadein, R.anim.fadeout);
                 }
             });
 
@@ -88,6 +89,7 @@ public class CategoryActivity extends AppCompatActivity {
                     String selectedName = myTextView.getText().toString();
                     Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                     nextActivity.putExtra("Name", selectedName);
+                    nextActivity.putExtra("PreviousActivity", "listview");
                     //nextActivity.putExtra("Database", (Parcelable) database);
                     startActivity(nextActivity);
                 }

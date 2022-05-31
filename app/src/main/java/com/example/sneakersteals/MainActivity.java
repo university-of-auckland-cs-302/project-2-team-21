@@ -153,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
                 String selectedName = myTextView.getText().toString();
                 Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                 nextActivity.putExtra("Name", selectedName);
+                nextActivity.putExtra("PreviousActivity", "mainactivity");
                 // nextActivity.putExtra("Database", (Parcelable) database);
                 startActivity(nextActivity);
             }

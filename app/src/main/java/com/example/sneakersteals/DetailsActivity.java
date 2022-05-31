@@ -1,9 +1,12 @@
 package com.example.sneakersteals;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,6 +28,7 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView shoeImageView;
         ViewPager mViewPager;
         Spinner sizeDropdown;
+        ImageButton returnButton;
 
         public ViewHolder() {
             nameTextView = findViewById(R.id.details_name);
@@ -34,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
             mViewPager = findViewById(R.id.viewPager);
             colourTextView = findViewById(R.id.details_colour);
             sizeDropdown = findViewById(R.id.size_dropdown);
+            returnButton = findViewById(R.id.back_button_details);
         }
     }
 
@@ -55,6 +60,7 @@ public class DetailsActivity extends AppCompatActivity {
         String selectedName = getIntent().getStringExtra("Name");
         Shoe currentShoe = database.getOneShoe(selectedName);
         global.incrementViewCount(currentShoe);
+        String previousActivity = getIntent().getStringExtra("PreviousActivity");
 
 
         ViewPageAdapter mViewPagerAdapter = new ViewPageAdapter(this, currentShoe.getImageFilenameList());
@@ -63,6 +69,15 @@ public class DetailsActivity extends AppCompatActivity {
         viewPager.setAdapter(mViewPagerAdapter);
 
         ArrayAdapter<String> dropdownAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currentShoe.getSizeList());
+
+        vh.returnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Return to previous activity with transition
+                finish();
+                overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            }
+        });
 
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
