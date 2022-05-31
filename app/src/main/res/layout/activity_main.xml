@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:background="#C9CFE1"
@@ -54,7 +54,7 @@
 
     <LinearLayout
         android:id="@+id/TopPicksShoes"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TopPicks"
         android:layout_centerHorizontal="true"
@@ -63,44 +63,13 @@
         android:orientation="horizontal">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/TopPicks"
         android:id="@+id/recyclerview" >
 
     </androidx.recyclerview.widget.RecyclerView>
-<!--        <ImageView-->
-<!--            android:background="@drawable/custom_shoeborder"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@drawable/displayshoe"-->
-<!--            android:contentDescription="@drawable/displayshoe" />-->
-
-<!--        <ImageView-->
-<!--            android:background="@drawable/custom_shoeborder"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@drawable/displayshoe"-->
-<!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="5dp" />-->
-
-<!--        <ImageView-->
-<!--            android:background="@drawable/custom_shoeborder"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@drawable/displayshoe"-->
-<!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="5dp" />-->
-
-<!--        <ImageView-->
-<!--            android:background="@drawable/custom_shoeborder"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@drawable/displayshoe"-->
-<!--            android:contentDescription="@drawable/displayshoe"-->
-<!--            android:layout_marginStart="5dp"/>-->
-
 
     </LinearLayout>
 
