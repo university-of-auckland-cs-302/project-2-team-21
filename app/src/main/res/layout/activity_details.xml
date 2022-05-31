@@ -43,19 +43,35 @@
 
         </TextView>
 
-        <TextView
-            android:fontFamily="@font/montserrat_alternates_medium"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:id="@+id/details_size"
-            android:padding="16dp"
-            android:text="Sizes:"
-            android:textColor="#76767D"
-            android:textSize="20dp">
+            android:layout_gravity="right"
+            >
+            <TextView
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/details_size"
+                android:padding="16dp"
+                android:text="Sizes:"
+                android:textColor="#76767D"
+                android:textSize="20dp">
 
-        </TextView>
 
+            </TextView>
+
+            <Spinner
+                android:id="@+id/size_dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/details_size"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+        </RelativeLayout>
         <TextView
             android:fontFamily="@font/montserrat_alternates_medium"
             android:layout_width="wrap_content"

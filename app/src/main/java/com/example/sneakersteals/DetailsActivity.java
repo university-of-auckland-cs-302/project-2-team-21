@@ -3,7 +3,9 @@ package com.example.sneakersteals;
 
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +24,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView nameTextView, descriptionTextView, sizeTextView, colourTextView;
         ImageView shoeImageView;
         ViewPager mViewPager;
+        Spinner sizeDropdown;
 
         public ViewHolder() {
             nameTextView = findViewById(R.id.details_name);
@@ -30,6 +33,7 @@ public class DetailsActivity extends AppCompatActivity {
             shoeImageView = findViewById(R.id.imageView);
             mViewPager = findViewById(R.id.viewPager);
             colourTextView = findViewById(R.id.details_colour);
+            sizeDropdown = findViewById(R.id.size_dropdown);
         }
     }
 
@@ -58,11 +62,12 @@ public class DetailsActivity extends AppCompatActivity {
 
         viewPager.setAdapter(mViewPagerAdapter);
 
-
+        ArrayAdapter<String> dropdownAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currentShoe.getSizeList());
 
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
-        vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
+        //vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
+        vh.sizeDropdown.setAdapter(dropdownAdapter);
         vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
     }
 
