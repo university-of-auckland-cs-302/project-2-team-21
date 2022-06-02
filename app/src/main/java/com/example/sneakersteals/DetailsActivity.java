@@ -1,6 +1,9 @@
 package com.example.sneakersteals;
 
 
+import static android.view.View.INVISIBLE;
+
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -21,6 +24,10 @@ import com.example.sneakersteals.Adaptors.ShoeAdaptor;
 import com.example.sneakersteals.Adaptors.ViewPageAdapter;
 import com.example.sneakersteals.Models.Shoe;
 
+import java.util.Locale;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class DetailsActivity extends AppCompatActivity {
 
     class ViewHolder {
@@ -29,14 +36,19 @@ public class DetailsActivity extends AppCompatActivity {
         ViewPager mViewPager;
         Spinner sizeDropdown;
         ImageButton returnButton;
+        CircleImageView colourImageView1, colourImageView2, colourImageView3, colourImageView4;
 
         public ViewHolder() {
             nameTextView = findViewById(R.id.details_name);
             descriptionTextView = findViewById(R.id.details_description);
-            sizeTextView = findViewById(R.id.details_size);
+            //sizeTextView = findViewById(R.id.details_size);
             shoeImageView = findViewById(R.id.imageView);
             mViewPager = findViewById(R.id.viewPager);
-            colourTextView = findViewById(R.id.details_colour);
+           // colourTextView = findViewById(R.id.details_colour);
+            colourImageView1 = findViewById(R.id.firstcolour);
+            colourImageView2 = findViewById(R.id.secondcolour);
+            colourImageView3 = findViewById(R.id.thirdcolour);
+            colourImageView4 = findViewById(R.id.fourthcolour);
             sizeDropdown = findViewById(R.id.size_dropdown);
             returnButton = findViewById(R.id.back_button_details);
         }
@@ -83,7 +95,39 @@ public class DetailsActivity extends AppCompatActivity {
         vh.descriptionTextView.setText(currentShoe.getDescription());
         //vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
         vh.sizeDropdown.setAdapter(dropdownAdapter);
-        vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
+        //vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
+        //Set colours
+        if (currentShoe.getColourList().size() == 1) {
+            vh.colourImageView1.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(0)));
+            vh.colourImageView2.setVisibility(View.GONE);
+            vh.colourImageView3.setVisibility(View.GONE);
+            vh.colourImageView4.setVisibility(View.GONE);
+        } else if (currentShoe.getColourList().size() == 2) {
+            vh.colourImageView1.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(0)));
+            vh.colourImageView2.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(1)));
+            vh.colourImageView3.setVisibility(View.GONE);
+            vh.colourImageView4.setVisibility(View.GONE);
+        } else if (currentShoe.getColourList().size() == 3) {
+            vh.colourImageView1.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(0)));
+            vh.colourImageView2.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(1)));
+            vh.colourImageView3.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(2)));
+            vh.colourImageView4.setVisibility(View.GONE);
+        } else if (currentShoe.getColourList().size() == 4) {
+            vh.colourImageView1.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(0)));
+            vh.colourImageView2.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(1)));
+            vh.colourImageView3.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(2)));
+            vh.colourImageView4.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(3)));
+        }
+
+
+    }
+
+    public static int getDrawbleId(Context context, String string) {
+        int i = context.getResources().getIdentifier(
+                (string.toLowerCase() + "colour"), "drawable",
+                context.getPackageName());
+
+        return i;
     }
 
 

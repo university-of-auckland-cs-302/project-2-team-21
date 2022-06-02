@@ -4,9 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/blackcolour.xml" value="0.144" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/choosecolour1.xml" value="0.144" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/choosecolour2.xml" value="0.144" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/creamcolour.xml" value="0.144" />
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/custom_shoeborder.xml" value="0.114" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/greycolour.xml" value="0.144" />
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Github/project-2-team-21/app/src/main/res/layout/activity_details.xml" value="0.18" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/redcolour.xml" value="0.144" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/drawable/yellowcolour.xml" value="0.144" />
+        <entry key="..\:/Github/project-2-team-21/app/src/main/res/layout/activity_details.xml" value="0.1" />
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/layout/activity_list.xml" value="0.1" />
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Github/project-2-team-21/app/src/main/res/layout/activity_search.xml" value="0.358695652173913" />
