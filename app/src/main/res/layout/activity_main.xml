@@ -73,11 +73,22 @@
 
     </LinearLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <LinearLayout
+        android:id="@+id/NikeAdidaslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/TopPicksShoes">
+        <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/NikeClouds"
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_below="@id/TopPicksShoes"
+
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+
         android:src="@drawable/nikeclouds"
 
         app:civ_border_color="#FFFF"
@@ -85,42 +96,64 @@
 
         tools:ignore="RtlSymmetry" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/adidasclouds"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:layout_below="@id/TopPicksShoes"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/adidasclouds"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/TopPicksShoes"
 
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@id/NikeClouds"
-        android:src="@drawable/adidasclouds"
-        app:civ_border_color="#FFFF"
 
-        app:civ_border_width="2dp"
-        tools:ignore="RtlSymmetry" >
 
-    </de.hdodenhof.circleimageview.CircleImageView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/pumalogo"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+            android:layout_alignTop="@id/NikeClouds"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/NikeClouds"
 
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:layout_below="@id/NikeClouds"
+            android:src="@drawable/adidasclouds"
+            app:civ_border_color="#FFFF"
 
+
+
+            app:civ_border_width="2dp"
+            tools:ignore="RtlSymmetry" >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/NikeAdidaslayout"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@id/NikeAdidaslayout">
 
-        android:src="@drawable/pumacircle"
-        app:civ_border_color="#FFFF"
-        app:civ_border_width="2dp"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pumalogo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pumacircle"
+            app:civ_border_color="#FFFF"
+            app:civ_border_width="2dp"
 
 
 
-        tools:ignore="RtlSymmetry" >
 
-    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            tools:ignore="RtlSymmetry" >
+
+        </de.hdodenhof.circleimageview.CircleImageView>
+    </LinearLayout>
+
+
+
+
+
+
 
 
 
