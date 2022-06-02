@@ -47,7 +47,7 @@
             android:layout_gravity="center"
             android:id="@+id/listview_header"
             android:text="Showing ? Shoes..."
-            android:textColor="#000000"
+            android:textColor="#2E8B57	"
             android:textSize="20sp"
             android:textStyle="bold" />
 
