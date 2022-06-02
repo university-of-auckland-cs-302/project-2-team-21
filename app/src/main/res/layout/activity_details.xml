@@ -14,30 +14,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#4682B4">
+
         <TextView
+            android:id="@+id/detailsview_header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:id="@+id/detailsview_header"
             android:text="Item Details"
-            android:textColor="#DC143C"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textColor="#311B92"
+            android:textSize="20sp" />
 
         <ImageButton
             android:id="@+id/back_button_details"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
             android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
             android:layout_marginHorizontal="15dp"
-            android:outlineAmbientShadowColor="#DC143C"
             android:background="@android:color/transparent"
+            android:layoutDirection="locale"
+            android:outlineAmbientShadowColor="#DC143C"
             android:src="@drawable/ic_arrow_back_24"
-            android:layoutDirection="locale">
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck">
 
         </ImageButton>
     </RelativeLayout>
@@ -51,12 +51,12 @@
 
 
 
-        <TextView
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hello"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textAlignment="center"
             android:textColor="#000000"
             android:padding="16dp"
@@ -64,60 +64,83 @@
             android:textStyle="bold">
 
         </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Description"
-            android:textColor="#76767D"
-            android:textStyle="italic"
-            android:padding="16dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/montserrat_alternates_medium"
-            android:id="@+id/details_description"
-            android:textSize="16dp">
 
-        </TextView>
-        <LinearLayout
+    <TextView
+        android:id="@+id/details_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:padding="16dp"
+        android:text="Description"
+        android:textColor="#455A64"
+        android:textSize="16dp"
+        android:textStyle="italic">
+
+    </TextView>
+
+    <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:background="#C9CFE1"
             android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/choosecolourLayout"
+                android:layout_width="134dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#A4A4A4"
+                app:cardCornerRadius="50dp"
+
+                >
             <TextView
                 android:id="@+id/details_size"
                 android:fontFamily="@font/montserrat_alternates_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:text="Sizes:"
-                android:textColor="#76767D"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/size_dropdown"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/size_dropdown"
+                android:text="Pick a size:"
+                android:textColor="#424242"
+                android:textStyle="bold"
                 />
 
-            <Spinner
-                android:id="@+id/size_dropdown"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-               >
-            </Spinner>
+                <Spinner
+                    android:id="@+id/size_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+            </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-            </LinearLayout>
 
-        <TextView
-            android:fontFamily="@font/montserrat_alternates_medium"
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/firstcolour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:padding="16dp"
-            android:id="@+id/details_colour"
-            android:text="Colour:"
-            android:textColor="#76767D"
-            android:textSize="20dp">
-        </TextView>
+            android:src="@drawable/choosecolour1"
+            android:layout_centerHorizontal="true"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/secondcolour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/choosecolour2"
+            android:layout_alignStart="@+id/firstcolour"
+            android:paddingLeft="40dp"/>
+
+    </RelativeLayout>
+
+
 
 
 

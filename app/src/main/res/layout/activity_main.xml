@@ -83,12 +83,6 @@
         android:id="@+id/NikeClouds"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_below="@id/TopPicksShoes"
-
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-
-
         android:src="@drawable/nikeclouds"
 
         app:civ_border_color="#FFFF"

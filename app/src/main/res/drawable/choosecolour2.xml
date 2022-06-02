@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="23dp"
     android:height="23dp"
     android:viewportWidth="23"
     android:viewportHeight="23"
     >
+
     <group>
 
         <clip-path
@@ -14,9 +15,8 @@
 
         <path
             android:pathData="M0 0V23H23V0"
-            android:fillColor="#2E2E2E"
+            android:fillColor="#746A36"
             />
-
 
     </group>
 
