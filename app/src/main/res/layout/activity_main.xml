@@ -2,7 +2,7 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:background="#C9CFE1"
@@ -29,7 +29,6 @@
             android:layout_gravity="center"
             app:queryHint="Search for shoes..."
             android:inputType="text"
-            android:minHeight="45dp"
             android:textColorHint="#C2F0E8"
             tools:ignore="HardcodedText"
             android:background="@drawable/rounded_searchview"
@@ -68,7 +67,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/TopPicks"
         android:id="@+id/recyclerview" >
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -81,91 +79,51 @@
         android:layout_height="150dp"
         android:layout_below="@id/TopPicksShoes"
         android:src="@drawable/nikeclouds"
-        android:layout_marginTop="50dp"
-        android:paddingStart="5dp"
 
         app:civ_border_color="#FFFF"
         app:civ_border_width="2dp"
 
         tools:ignore="RtlSymmetry" />
-        <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:paddingStart="70dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Nike"
-        android:layout_below="@id/TopPicksShoes"
-        android:textAlignment="gravity"
-        android:textColor="#000000"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText,RtlSymmetry" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/adidasclouds"
         android:layout_width="200dp"
         android:layout_height="150dp"
         android:layout_below="@id/TopPicksShoes"
-        android:layout_centerVertical="@id/adidasText"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="2dp"
-        android:layout_alignRight="@id/adidasText"
 
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/NikeClouds"
         android:src="@drawable/adidasclouds"
         app:civ_border_color="#FFFF"
 
         app:civ_border_width="2dp"
-        tools:ignore="RtlSymmetry" />
+        tools:ignore="RtlSymmetry" >
 
-    <TextView
-        android:id="@+id/adidasText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/TopPicksShoes"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:gravity="right"
-        android:paddingRight="70dp"
-
-        android:text="Adidas"
-        android:textAlignment="gravity"
-        android:textColor="#000000"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+    </de.hdodenhof.circleimageview.CircleImageView>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/pumalogo"
         android:layout_width="200dp"
         android:layout_height="150dp"
-        android:layout_below="@id/pumatext"
-        android:layout_centerVertical="@id/adidasText"
-        android:layout_marginBottom="2dp"
-        android:layout_centerHorizontal="true"
-        android:layout_alignRight="@id/adidasText"
 
-        android:src="@drawable/pumalogo"
-        app:civ_border_color="#FFFF"
-
-        app:civ_border_width="2dp"
-        tools:ignore="RtlSymmetry"/>
-
-    <TextView
-        android:id="@+id/pumatext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="169dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:layout_below="@id/NikeClouds"
-        android:fontFamily="@font/montserrat_alternates_medium"
-        android:gravity="right"
-        android:paddingRight="55dp"
-        android:text="Puma"
-        android:textAlignment="gravity"
-        android:textColor="#000000"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText"/>
+
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/pumacircle"
+        app:civ_border_color="#FFFF"
+        app:civ_border_width="2dp"
+
+
+
+        tools:ignore="RtlSymmetry" >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+
+
 
 
 
