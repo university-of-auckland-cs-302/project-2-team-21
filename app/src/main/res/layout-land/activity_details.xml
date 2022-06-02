@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#C9CFE1"
+    tools:context=".DetailsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4682B4">
+
+        <TextView
+            android:id="@+id/detailsview_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:text="Item Details"
+            android:textColor="#311B92"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/back_button_details"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="15dp"
+            android:background="@android:color/transparent"
+            android:layoutDirection="locale"
+            android:outlineAmbientShadowColor="#DC143C"
+            android:src="@drawable/ic_arrow_back_24"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck">
+
+        </ImageButton>
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
+
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:fontFamily="@font/montserrat_alternates_medium"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:padding="16dp"
+            android:id="@+id/details_name"
+            android:textStyle="bold">
+
+        </TextView>
+
+    <TextView
+        android:id="@+id/details_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:padding="16dp"
+        android:text="Description"
+        android:textColor="#455A64"
+        android:textSize="16dp"
+        android:textStyle="italic">
+
+    </TextView>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="#C9CFE1"
+            android:orientation="horizontal">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_size"
+                android:layout_width="134dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                app:cardBackgroundColor="#A4A4A4"
+                app:cardCornerRadius="50dp"
+
+                >
+            <TextView
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Pick a size:"
+                android:textColor="#424242"
+                android:textStyle="bold"
+                />
+
+                <Spinner
+                    android:id="@+id/size_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/details_colour"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+
+            android:orientation="horizontal"
+
+            android:layout_below="@id/details_size"
+            android:layout_marginTop="10dp"
+
+            app:cardBackgroundColor="#A4A4A4"
+            app:cardCornerRadius="50dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/firstcolour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bluecolour"
+                    android:layout_marginStart="10dp"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/secondcolour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/whitecolour"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp"
+                    android:layout_marginStart="10dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/thirdcolour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/redcolour"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp"
+                    android:layout_marginStart="10dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="5dp"/>
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fourthcolour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/yellowcolour"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="1dp"
+                    android:visibility="visible"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"/>
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>
+</ScrollView>
+
+
+
