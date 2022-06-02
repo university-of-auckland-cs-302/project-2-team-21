@@ -86,7 +86,7 @@
             android:background="#C9CFE1"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
-                android:id="@+id/choosecolourLayout"
+                android:id="@+id/details_size"
                 android:layout_width="134dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
@@ -96,7 +96,6 @@
 
                 >
             <TextView
-                android:id="@+id/details_size"
                 android:fontFamily="@font/montserrat_alternates_medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -113,33 +112,43 @@
                     android:layout_gravity="right"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
             </androidx.cardview.widget.CardView>
-            </RelativeLayout>
 
 
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        >
+        <androidx.cardview.widget.CardView
+            android:id="@+id/details_colour"
+            android:layout_width="134dp"
+            android:layout_height="38dp"
+
+            android:orientation="horizontal"
+
+            android:layout_below="@id/details_size"
+            android:layout_marginTop="10dp"
+
+            app:cardBackgroundColor="#A4A4A4"
+            app:cardCornerRadius="50dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/firstcolour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/choosecolour1"
-            android:layout_centerHorizontal="true"/>
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"/>
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/secondcolour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/choosecolour2"
-            android:layout_alignStart="@+id/firstcolour"
-            android:paddingLeft="40dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"/>
+
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-
 
 
 
