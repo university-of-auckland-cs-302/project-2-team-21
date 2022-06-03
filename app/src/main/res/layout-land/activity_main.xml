@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:background="#C9CFE1"
+    android:background="@drawable/gradient_background"
     android:layout_width="wrap_content">
 
     <LinearLayout
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            app:queryHint="Search for shoes..."
+            app:queryHint="Search for Sneakers..."
             android:inputType="text"
             android:textColorHint="#C2F0E8"
             tools:ignore="HardcodedText"
@@ -46,12 +46,12 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="0dp"
         android:fontFamily="@font/montserrat_alternates_medium"
-        android:text="Top Picks"
+        android:text="@string/top_picks"
         android:textAlignment="center"
-        android:textColor="#2E8B57	"
+        android:textColor="#FFFF"
         android:textSize="26sp"
         android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+         />
 
     <LinearLayout
         android:id="@+id/TopPicksShoes"
@@ -74,66 +74,51 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/NikeAdidaslayout"
-        android:layout_width="match_parent"
+
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:dividerPadding="40dp"
-        android:layout_below="@id/TopPicksShoes">
+        android:layout_below="@id/TopPicksShoes"
+
+        android:layout_centerInParent="true"
+        android:paddingTop="50dp">
         <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/NikeClouds"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:src="@drawable/nikeclouds"
+            android:id="@+id/NikeClouds"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/nikeclouds"
 
 
-        app:civ_border_color="#FFFF"
-        app:civ_border_width="2dp"
+            app:civ_border_color="#FFFF"
+            app:civ_border_width="2dp"
             android:layout_gravity="left"
 
-        tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/adidasclouds"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-            android:layout_below="@id/TopPicksShoes"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/adidasclouds"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
 
+                android:src="@drawable/adidasclouds"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="2dp"
+                tools:ignore="RtlSymmetry" >
 
+            </de.hdodenhof.circleimageview.CircleImageView>
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pumalogo"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
 
-            android:layout_alignTop="@id/NikeClouds"
-            android:layout_alignParentEnd="true"
-            android:layout_alignBottom="@id/NikeClouds"
-            android:layout_gravity="center"
+                android:src="@drawable/pumacircle"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="2dp"
+                android:layout_gravity="right"
+                tools:ignore="RtlSymmetry" >
 
-            android:src="@drawable/adidasclouds"
-            app:civ_border_color="#FFFF"
-
-
-
-            app:civ_border_width="2dp"
-            tools:ignore="RtlSymmetry" >
-
-        </de.hdodenhof.circleimageview.CircleImageView>
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/pumalogo"
-            android:layout_width="200dp"
-            android:layout_height="150dp"
-
-            android:src="@drawable/pumacircle"
-            app:civ_border_color="#FFFF"
-            app:civ_border_width="2dp"
-            android:layout_gravity="right"
-
-
-
-
-
-
-            tools:ignore="RtlSymmetry" >
-
-        </de.hdodenhof.circleimageview.CircleImageView>
+            </de.hdodenhof.circleimageview.CircleImageView>
 
     </LinearLayout>
 

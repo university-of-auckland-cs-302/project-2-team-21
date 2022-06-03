@@ -27,7 +27,7 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            app:queryHint="Search for shoes..."
+            app:queryHint="Search for Sneakers..."
             android:inputType="text"
             android:textColorHint="#C2F0E8"
             tools:ignore="HardcodedText"
@@ -93,6 +93,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/TopPicksShoes"
+        android:paddingTop="50dp"
         >
         <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/NikeClouds"
@@ -109,14 +110,8 @@
             android:id="@+id/adidasclouds"
             android:layout_width="200dp"
             android:layout_height="150dp"
-            android:layout_below="@id/TopPicksShoes"
 
 
-
-
-            android:layout_alignTop="@id/NikeClouds"
-            android:layout_alignParentEnd="true"
-            android:layout_alignBottom="@id/NikeClouds"
 
             android:src="@drawable/adidasclouds"
             app:civ_border_color="#FFFF"
@@ -138,7 +133,7 @@
         android:layout_below="@id/NikeAdidaslayout"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@id/NikeAdidaslayout">
+        >
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/pumalogo"

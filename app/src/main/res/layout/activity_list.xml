@@ -48,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/listview_header"
+            android:fontFamily="@font/montserrat_alternates_medium"
             android:text="Showing ? Shoes..."
             android:textColor="#424242"
             android:textSize="20sp"
