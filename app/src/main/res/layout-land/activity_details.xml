@@ -129,14 +129,16 @@
             android:orientation="horizontal"
 
             android:layout_below="@id/details_size"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
 
             app:cardBackgroundColor="#A4A4A4"
             app:cardCornerRadius="50dp">
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/firstcolour"
@@ -172,6 +174,7 @@
                     android:id="@+id/fourthcolour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
                     android:src="@drawable/yellowcolour"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="1dp"

@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4682B4">
+        android:background="#C9CFE1">
 
         <TextView
             android:id="@+id/detailsview_header"
@@ -23,7 +23,7 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/montserrat_alternates_medium"
             android:text="Item Details"
-            android:textColor="#311B92"
+            android:textColor="#323B5A"
             android:textSize="20sp" />
 
         <ImageButton
@@ -87,7 +87,7 @@
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
                 android:id="@+id/details_size"
-                android:layout_width="134dp"
+                android:layout_width="150dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
                 android:orientation="horizontal"
@@ -100,6 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:layout_gravity="center_vertical"
                 android:text="Pick a size:"
                 android:textColor="#424242"
                 android:textStyle="bold"
@@ -109,7 +110,8 @@
                     android:id="@+id/size_dropdown"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_gravity="right"
+                    android:layout_gravity="end"
+
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
             </androidx.cardview.widget.CardView>
 
@@ -119,7 +121,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/details_colour"
-            android:layout_width="wrap_content"
+            android:layout_width="135dp"
             android:layout_height="38dp"
 
             android:orientation="horizontal"
@@ -139,7 +141,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/bluecolour"
-                    android:layout_marginStart="10dp"
+
+                    android:layout_marginLeft="6dp"
+
                     app:civ_border_color="@color/white"
                     app:civ_border_width="1dp"
                     android:visibility="visible"
