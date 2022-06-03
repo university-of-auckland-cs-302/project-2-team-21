@@ -104,15 +104,20 @@
                 android:text="Pick a size:"
                 android:textColor="#424242"
                 android:textStyle="bold"
+
                 />
 
                 <Spinner
                     android:id="@+id/size_dropdown"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_gravity="end"
+                    android:layout_marginLeft="115dp"
 
-                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"></Spinner>
+
+
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                </Spinner>
             </androidx.cardview.widget.CardView>
 
 
