@@ -27,6 +27,8 @@
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
+
+            android:foregroundGravity="center"
             app:queryHint="Search for Sneakers..."
             android:inputType="text"
             android:textColorHint="#C2F0E8"
@@ -94,6 +96,8 @@
         android:orientation="horizontal"
         android:layout_below="@id/TopPicksShoes"
         android:paddingTop="50dp"
+
+        android:layout_centerInParent="true"
         >
         <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/NikeClouds"

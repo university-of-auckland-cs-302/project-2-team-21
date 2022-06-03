@@ -111,7 +111,7 @@
                     android:id="@+id/size_dropdown"
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_marginLeft="115dp"
+                    android:layout_marginStart="115dp"
 
 
 
