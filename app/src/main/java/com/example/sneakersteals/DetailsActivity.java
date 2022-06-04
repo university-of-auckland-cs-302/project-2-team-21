@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -28,10 +29,13 @@ import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DetailsActivity extends AppCompatActivity {
+public class DetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+
+
 
     class ViewHolder {
-        TextView nameTextView, descriptionTextView, sizeTextView, colourTextView;
+        TextView nameTextView, descriptionTextView, sizeTextView;
         ImageView shoeImageView;
         ViewPager mViewPager;
         Spinner sizeDropdown;
@@ -41,7 +45,7 @@ public class DetailsActivity extends AppCompatActivity {
         public ViewHolder() {
             nameTextView = findViewById(R.id.details_name);
             descriptionTextView = findViewById(R.id.details_description);
-            //sizeTextView = findViewById(R.id.details_size);
+            sizeTextView = findViewById(R.id.size_text);
             shoeImageView = findViewById(R.id.imageView);
             mViewPager = findViewById(R.id.viewPager);
            // colourTextView = findViewById(R.id.details_colour);
@@ -81,6 +85,23 @@ public class DetailsActivity extends AppCompatActivity {
         viewPager.setAdapter(mViewPagerAdapter);
 
         ArrayAdapter<String> dropdownAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currentShoe.getSizeList());
+        dropdownAdapter.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item);
+        vh.sizeDropdown.setAdapter(dropdownAdapter);
+
+        vh.sizeDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String sizeText = "Pick a size:   " + currentShoe.getSizeList().get(position);
+                vh.sizeTextView.setText(sizeText);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
 
         vh.returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +115,8 @@ public class DetailsActivity extends AppCompatActivity {
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
         //vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
-        vh.sizeDropdown.setAdapter(dropdownAdapter);
+
+//        vh.sizeDropdown.setOnItemClickListener(this);
         //vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
         //Set colours
         if (currentShoe.getColourList().size() == 1) {
@@ -128,6 +150,17 @@ public class DetailsActivity extends AppCompatActivity {
                 context.getPackageName());
 
         return i;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String sizeText = "Pick a size: " + parent.getItemAtPosition(position);
+        vh.sizeTextView.setText(sizeText);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 
