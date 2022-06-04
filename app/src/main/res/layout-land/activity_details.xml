@@ -46,14 +46,13 @@
         </ImageButton>
     </RelativeLayout>
 
+
     <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@color/white"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck"/>
-
-
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <TextView
             android:layout_width="match_parent"
@@ -74,6 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:fontFamily="@font/montserrat_alternates_medium"
         android:padding="16dp"
         android:text="Description"
@@ -87,6 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
             android:background="#C9CFE1"
             android:orientation="horizontal">
             <androidx.cardview.widget.CardView
@@ -94,6 +95,7 @@
                 android:layout_width="134dp"
                 android:layout_height="38dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:orientation="horizontal"
                 app:cardBackgroundColor="#A4A4A4"
                 app:cardCornerRadius="50dp"
@@ -126,6 +128,7 @@
             android:id="@+id/details_colour"
             android:layout_width="wrap_content"
             android:layout_height="38dp"
+            android:layout_marginStart="10dp"
 
             android:orientation="horizontal"
 
