@@ -7,63 +7,70 @@
     android:background="#330867"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No Results Found."
-        android:id="@+id/no_results_text"
-        android:visibility="gone"
-        android:textSize="16sp"></TextView>
 
-
-<ListView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    android:id="@+id/list"
-    android:layout_weight="1"
-    android:layout_marginTop="85dp"
-    android:dividerHeight="10sp"
-    android:background="@drawable/gradient_background"
-    />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/TopCardView"
+    <ListView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-
-        android:gravity="top"
-        android:orientation="horizontal"
-
-
-        app:cardCornerRadius="60dp"
-        app:cardElevation="50dp"
-
-        >
-
-
-        <ImageButton
-            android:id="@+id/back_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginHorizontal="15dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_arrow_back_24" />
-
+        android:id="@+id/list"
+        android:layout_weight="1"
+        android:layout_marginTop="85dp"
+        android:dividerHeight="10sp"
+        android:background="@drawable/gradient_background"
+        />
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/no_results_text"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:id="@+id/listview_header"
+            android:gravity="center"
+            android:layout_marginTop="200dp"
             android:fontFamily="@font/montserrat_alternates_medium"
-            android:text="Showing ? Shoes..."
-            android:textColor="#424242"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:text="No results found! :("
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:visibility="gone"
+            >
 
-    </androidx.cardview.widget.CardView>
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/TopCardView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+
+            android:gravity="top"
+            android:orientation="horizontal"
+
+
+            app:cardCornerRadius="60dp"
+            app:cardElevation="50dp"
+
+            >
+
+
+            <ImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_arrow_back_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/listview_header"
+                android:fontFamily="@font/montserrat_alternates_medium"
+                android:text="Showing ? Shoes..."
+                android:textColor="#424242"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </androidx.cardview.widget.CardView>
 
 
 
-</FrameLayout>
+    </FrameLayout>
 
