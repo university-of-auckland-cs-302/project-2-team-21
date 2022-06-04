@@ -7,6 +7,13 @@
     android:background="#330867"
     android:orientation="vertical" >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Results Found."
+        android:id="@+id/no_results_text"
+        android:visibility="gone"
+        android:textSize="16sp"></TextView>
 
 
 <ListView xmlns:android="http://schemas.android.com/apk/res/android"

@@ -68,7 +68,7 @@ public class CategoryActivity extends AppCompatActivity {
                     ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
                     listView.setAdapter(shoeAdaptor);
                 } else {
-                    //vh.noResults.setVisibility(VISIBLE);
+                    vh.noResults.setVisibility(VISIBLE);
                 }
 
             }
