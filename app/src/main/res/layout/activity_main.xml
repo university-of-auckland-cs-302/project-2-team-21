@@ -11,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="75dp"
             android:layout_height="75dp"
@@ -24,11 +25,11 @@
 
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchview"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
 
-            android:foregroundGravity="center"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
             app:queryHint="Search for Sneakers..."
             android:inputType="text"
             android:textColorHint="#C2F0E8"
@@ -93,22 +94,21 @@
         android:id="@+id/NikeAdidaslayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@id/TopPicksShoes"
-        android:paddingTop="50dp"
-
         android:layout_centerInParent="true"
-        >
+        android:orientation="horizontal"
+        android:paddingTop="25dp">
+
         <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/NikeClouds"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:src="@drawable/nikeclouds"
+            android:id="@+id/NikeClouds"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/nikeclouds"
 
-        app:civ_border_color="#FFFF"
-        app:civ_border_width="2dp"
+            app:civ_border_color="#FFFF"
+            app:civ_border_width="2dp"
 
-        tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/adidasclouds"
@@ -116,14 +116,12 @@
             android:layout_height="150dp"
 
 
-
             android:src="@drawable/adidasclouds"
             app:civ_border_color="#FFFF"
 
 
-
             app:civ_border_width="2dp"
-            tools:ignore="RtlSymmetry" >
+            tools:ignore="RtlSymmetry">
 
         </de.hdodenhof.circleimageview.CircleImageView>
 
@@ -132,10 +130,11 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_below="@id/NikeAdidaslayout"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+
+
+        android:layout_centerInParent="true"
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
