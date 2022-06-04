@@ -101,6 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:id="@+id/size_text"
                 android:layout_gravity="center_vertical"
                 android:text="Pick a size:"
                 android:textColor="#424242"
@@ -113,6 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_marginStart="115dp"
+                    android:spinnerMode="dropdown"
 
 
 
@@ -127,8 +129,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/details_colour"
-            android:layout_width="135dp"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
             android:orientation="horizontal"
 
@@ -140,50 +142,45 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="5dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/firstcolour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/bluecolour"
-
-                    android:layout_marginLeft="6dp"
-
+                    android:layout_marginHorizontal="5dp"
                     app:civ_border_color="@color/white"
                     app:civ_border_width="1dp"
-                    android:visibility="visible"
-                    android:layout_marginTop="5dp"/>
+                    android:visibility="visible" />
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/secondcolour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/whitecolour"
                     app:civ_border_color="@color/white"
+                    android:layout_marginHorizontal="5dp"
                     app:civ_border_width="1dp"
-                    android:layout_marginStart="10dp"
-                    android:visibility="visible"
-                    android:layout_marginTop="5dp"/>
+                    android:visibility="visible" />
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/thirdcolour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/redcolour"
                     app:civ_border_color="@color/white"
+                    android:layout_marginHorizontal="5dp"
                     app:civ_border_width="1dp"
-                    android:layout_marginStart="10dp"
-                    android:visibility="visible"
-                    android:layout_marginTop="5dp"/>
+                    android:visibility="visible" />
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/fourthcolour"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/yellowcolour"
                     app:civ_border_color="@color/white"
+                    android:layout_marginHorizontal="5dp"
                     app:civ_border_width="1dp"
-                    android:visibility="visible"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="5dp"/>
+                    android:visibility="visible" />
             </LinearLayout>
 
 
