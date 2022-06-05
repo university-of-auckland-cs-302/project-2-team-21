@@ -60,6 +60,7 @@
         android:id="@+id/tablayout"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
+        android:layout_centerInParent="true"
         android:background="@android:color/transparent"
         app:tabIndicatorHeight="0dp"
         android:layout_alignParentBottom="true">
