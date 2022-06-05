@@ -17,7 +17,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#4682B4">
+        android:background="#C9CFE1">
 
         <TextView
             android:id="@+id/detailsview_header"
@@ -27,7 +27,7 @@
             android:layout_centerInParent="true"
             android:fontFamily="@font/montserrat_alternates_medium"
             android:text="Item Details"
-            android:textColor="#311B92"
+            android:textColor="#323B5A"
             android:textSize="20sp" />
 
         <ImageButton
