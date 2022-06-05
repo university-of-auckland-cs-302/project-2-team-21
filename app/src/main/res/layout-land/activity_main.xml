@@ -80,7 +80,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/TopPicksShoes"
-
         android:layout_centerInParent="true"
         >
         <de.hdodenhof.circleimageview.CircleImageView
@@ -88,19 +87,15 @@
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:src="@drawable/nikeclouds"
-
-
             app:civ_border_color="#FFFF"
             app:civ_border_width="2dp"
             android:layout_gravity="left"
-
             tools:ignore="RtlSymmetry" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/adidasclouds"
                 android:layout_width="200dp"
                 android:layout_height="150dp"
-
                 android:src="@drawable/adidasclouds"
                 app:civ_border_color="#FFFF"
                 app:civ_border_width="2dp"
@@ -112,7 +107,6 @@
                 android:id="@+id/pumalogo"
                 android:layout_width="200dp"
                 android:layout_height="150dp"
-
                 android:src="@drawable/pumacircle"
                 app:civ_border_color="#FFFF"
                 app:civ_border_width="2dp"
@@ -122,6 +116,5 @@
             </de.hdodenhof.circleimageview.CircleImageView>
 
     </LinearLayout>
-
 
 </RelativeLayout>

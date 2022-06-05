@@ -30,7 +30,7 @@ public class ViewPageAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        // return the number of images
+        //Return the number of images
         return images.size();
     }
 
@@ -47,6 +47,7 @@ public class ViewPageAdapter extends PagerAdapter {
 
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageView);
 
+        //Get and set image
         int i = mContext.getResources().getIdentifier(
                 images.get(position), "drawable",
                 mContext.getPackageName());

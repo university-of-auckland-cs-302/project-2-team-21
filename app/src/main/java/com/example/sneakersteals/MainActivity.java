@@ -47,66 +47,63 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
 
     ViewHolder vh;
 
-
+    //Get singleton database
     Singleton global=Singleton.getInstance();
     DataProvider database = global.getDatabase();
-
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
-    private ImageView supportActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout); //Set transition
         setContentView(R.layout.activity_main);
         statusBarcolour();
+        vh = new ViewHolder();
+
+        //Set layout manager and adaptor for top picks section
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        //((SneakSteals) this.getApplication()).initialize();
-        vh = new ViewHolder();
         TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, database.getTopPicks());
         recyclerView.setLayoutManager(layoutManager);
 
-        //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
 
+        //Click listener when user clicks on nike category
         vh.circleNike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Nike");
-                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
 
+        //Click listener when user clicks on adidas category
         vh.circleAdidas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Adidas");
-                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
+
+        //Click listener when user clicks on puma category
         vh.circlePuma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Brand", "Puma");
-                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
             }
         });
 
+        //Click listener when user makes a search enquiry
         vh.searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Intent listActivity = new Intent(getBaseContext(), CategoryActivity.class);
                 listActivity.putExtra("Search Term", query);
-                //listActivity.putExtra("Database", (Parcelable) database);
                 startActivity(listActivity);
                 return false;
             }
@@ -119,6 +116,7 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
 
         });
 
+        //Click listener when user clicks an item in top picks
         topPicksAdaptor.setClickListener(new TopPicksAdaptor.ItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
@@ -126,14 +124,13 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
                 String selectedName = myTextView.getText().toString();
                 Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                 nextActivity.putExtra("Name", selectedName);
-               // nextActivity.putExtra("Database", (Parcelable) database);
                 startActivity(nextActivity);
             }
         });
 
     }
 
-    //Update the top picks section
+    //Update the top picks section when resume activity
     @Override
     protected void onResume() {
         super.onResume();
@@ -144,7 +141,6 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
 
         TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, database.getTopPicks());
         recyclerView.setLayoutManager(layoutManager);
-        //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
 
 
@@ -155,8 +151,6 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
                 String selectedName = myTextView.getText().toString();
                 Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                 nextActivity.putExtra("Name", selectedName);
-                nextActivity.putExtra("PreviousActivity", "mainactivity");
-                // nextActivity.putExtra("Database", (Parcelable) database);
                 startActivity(nextActivity);
             }
         });
@@ -168,14 +162,10 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         String selectedName = myTextView.getText().toString();
         Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
         nextActivity.putExtra("Name", selectedName);
-       // nextActivity.putExtra("Database", (Parcelable) database);
         startActivity(nextActivity);
     }
 
-    public void setSupportActionBar(ImageView supportActionBar) {
-        this.supportActionBar = supportActionBar;
-    }
-
+    //Set status bar colour
     public void statusBarcolour() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));

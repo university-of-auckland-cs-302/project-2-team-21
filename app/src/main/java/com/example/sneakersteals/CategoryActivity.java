@@ -21,8 +21,6 @@ import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
 
-
-
         class ViewHolder {
             TextView noResults;
             TextView bannerText;
@@ -34,22 +32,22 @@ public class CategoryActivity extends AppCompatActivity {
             }
         }
 
-
-
         ViewHolder vh;
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+            overridePendingTransition(R.anim.fadein, R.anim.fadeout); //Set transitions
             setContentView(R.layout.activity_list);
             ListView listView = findViewById(R.id.list);
             statusBarcolour();
 
 
-            //Get the intent (Which brand to display)
+            //Get the info from main activity
             String brand = getIntent().getStringExtra("Brand");
             String searchInput = getIntent().getStringExtra("Search Term");
+
+            //Get singleton database
             Singleton global=Singleton.getInstance();
             DataProvider database = global.getDatabase();
 
@@ -57,13 +55,13 @@ public class CategoryActivity extends AppCompatActivity {
 
             vh = new ViewHolder();
             //Check which intent to use
-            if (searchInput == null) {
+            if (searchInput == null) { //If category is clicked
                 ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getBrandShoes(brand));
 
                 listView.setAdapter(shoeAdaptor);
                 String mBannerText = "Showing " + brand + " shoes";
                 vh.bannerText.setText(mBannerText);
-            } else if (brand == null) {
+            } else if (brand == null) { //If searchbar is used
                 List<Shoe> searchedShoes = database.getSearchShoes(searchInput);
                 String mBannerText = "Showing results for: " + searchInput;
                 vh.bannerText.setText(mBannerText);
@@ -71,6 +69,7 @@ public class CategoryActivity extends AppCompatActivity {
                     ShoeAdaptor shoeAdaptor = new ShoeAdaptor(this, R.layout.list_view_shoe_item, database.getSearchShoes(searchInput));
                     listView.setAdapter(shoeAdaptor);
                 } else {
+                    //Make no results found text visible
                     vh.noResults.setVisibility(VISIBLE);
                 }
 
@@ -92,8 +91,6 @@ public class CategoryActivity extends AppCompatActivity {
                     String selectedName = myTextView.getText().toString();
                     Intent nextActivity = new Intent(getBaseContext(), DetailsActivity.class);
                     nextActivity.putExtra("Name", selectedName);
-                    nextActivity.putExtra("PreviousActivity", "listview");
-                    //nextActivity.putExtra("Database", (Parcelable) database);
                     startActivity(nextActivity);
                 }
             });
@@ -101,6 +98,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         }
 
+        //Set the status bar colour
     public void statusBarcolour() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));

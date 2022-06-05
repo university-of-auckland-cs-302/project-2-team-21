@@ -67,39 +67,14 @@ public class ShoeAdaptor extends ArrayAdapter<Shoe> {
             //Get the Number object for the current position
             Shoe currentShoe = mShoes.get(position);
 
-            //Set the attributed of list_view_number_item views
-
+            //Set image
             int i = mContext.getResources().getIdentifier(
                     currentShoe.getImageFilenameList().get(0), "drawable",
                     mContext.getPackageName());
-            vh.shoeTextView.setText(currentShoe.getName());
-            //Setting the icon\
             vh.shoeImageView.setImageResource(i);
 
-        //iconImageView.setImageResource(i);
-
-
-//        //Getting the audio resource id for the current Number object
-//        final String audio = currentNumber.getAudioFilename();
-//        final ImageView play = (ImageView) currentListViewItem.findViewById(R.id.play_image_view);
-
-//        //Setting the image click handler
-//        play.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                //Operations to perform when the play ImageView is clicked
-//                int i = mContext.getResources().getIdentifier(
-//                        audio, "raw",
-//                        mContext.getPackageName());
-//                //Using MediaPlayer to play the audio file
-//                if (mediaPlayer != null)
-//                    mediaPlayer.release();
-//                mediaPlayer = MediaPlayer.create(mContext, i);
-//                mediaPlayer.start();
-//
-//            }
-//        }
-
+            //Set text
+            vh.shoeTextView.setText(currentShoe.getName());
 
         return currentListViewItem;
     }

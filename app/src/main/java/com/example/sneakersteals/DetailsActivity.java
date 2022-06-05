@@ -31,7 +31,7 @@ import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DetailsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class DetailsActivity extends AppCompatActivity {
 
 
 
@@ -51,7 +51,6 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
             sizeTextView = findViewById(R.id.size_text);
             shoeImageView = findViewById(R.id.imageView);
             mViewPager = findViewById(R.id.viewPager);
-           // colourTextView = findViewById(R.id.details_colour);
             colourImageView1 = findViewById(R.id.firstcolour);
             colourImageView2 = findViewById(R.id.secondcolour);
             colourImageView3 = findViewById(R.id.thirdcolour);
@@ -73,6 +72,7 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
 
         vh = new DetailsActivity.ViewHolder();
 
+        //Get singleton database
         Singleton global=Singleton.getInstance();
         DataProvider database = global.getDatabase();
         statusBarcolour();
@@ -80,20 +80,20 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
 
         String selectedName = getIntent().getStringExtra("Name");
         Shoe currentShoe = database.getOneShoe(selectedName);
-        global.incrementViewCount(currentShoe);
-        String previousActivity = getIntent().getStringExtra("PreviousActivity");
+        global.incrementViewCount(currentShoe); //Increment view count when this view is created
 
-
+        //Setup viewpager with tablayout for the image buttons
         ViewPageAdapter mViewPagerAdapter = new ViewPageAdapter(this, currentShoe.getImageFilenameList());
         ViewPager viewPager = findViewById(R.id.viewPager);
-
         viewPager.setAdapter(mViewPagerAdapter);
         vh.mTabLayout.setupWithViewPager(viewPager, true);
 
+        //Setup size selector dropdown
         ArrayAdapter<String> dropdownAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currentShoe.getSizeList());
         dropdownAdapter.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item);
         vh.sizeDropdown.setAdapter(dropdownAdapter);
 
+        //Update text with selected size
         vh.sizeDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
 
             @Override
@@ -118,13 +118,11 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
             }
         });
 
+        //Set name and description
         vh.nameTextView.setText(currentShoe.getName());
         vh.descriptionTextView.setText(currentShoe.getDescription());
-        //vh.sizeTextView.setText("Sizes available: " + currentShoe.getSizeList().toString());
 
-//        vh.sizeDropdown.setOnItemClickListener(this);
-        //vh.colourTextView.setText("Colours available: " + currentShoe.getColourList().toString());
-        //Set colours
+        //Update colour circles so they have the correct colour and only view as much as needed.
         if (currentShoe.getColourList().size() == 1) {
             vh.colourImageView1.setImageResource(getDrawbleId(this, currentShoe.getColourList().get(0)));
             vh.colourImageView2.setVisibility(View.GONE);
@@ -150,25 +148,15 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
 
     }
 
+    //Helper function to get image resource id for colour circles
     public static int getDrawbleId(Context context, String string) {
         int i = context.getResources().getIdentifier(
                 (string.toLowerCase() + "colour"), "drawable",
                 context.getPackageName());
-
         return i;
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String sizeText = "Pick a size: " + parent.getItemAtPosition(position);
-        vh.sizeTextView.setText(sizeText);
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
-    }
-
+    //Set status bar colour
     public void statusBarcolour() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
             getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));

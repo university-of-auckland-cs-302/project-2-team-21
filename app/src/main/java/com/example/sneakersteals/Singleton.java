@@ -18,6 +18,8 @@ public class Singleton {
     public DataProvider getDatabase() {
         return database;
     }
+
+    //Increment the viewcount of a single shoe
     public void incrementViewCount(Shoe currentShoe) {
         database.shoeList.get(database.shoeList.indexOf(currentShoe)).incrementViewCount();
     }

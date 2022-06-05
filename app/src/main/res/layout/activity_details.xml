@@ -2,11 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     android:orientation="vertical"
     android:background="#C9CFE1"
     tools:context=".DetailsActivity">
@@ -110,9 +107,7 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 app:cardBackgroundColor="#A4A4A4"
-                app:cardCornerRadius="50dp"
-
-                >
+                app:cardCornerRadius="50dp">
             <TextView
                 android:fontFamily="@font/montserrat_alternates_medium"
                 android:layout_width="wrap_content"
@@ -123,7 +118,6 @@
                 android:text="Pick a size:"
                 android:textColor="#424242"
                 android:textStyle="bold"
-
                 />
 
                 <Spinner
@@ -132,9 +126,6 @@
                     android:layout_height="fill_parent"
                     android:layout_marginStart="115dp"
                     android:spinnerMode="dropdown"
-
-
-
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
 
                 </Spinner>
@@ -148,12 +139,9 @@
             android:id="@+id/details_colour"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:orientation="horizontal"
-
             android:layout_below="@id/details_size"
             android:layout_marginTop="10dp"
-
             app:cardBackgroundColor="#A4A4A4"
             app:cardCornerRadius="50dp">
             <LinearLayout
@@ -200,14 +188,9 @@
                     android:visibility="visible" />
             </LinearLayout>
 
-
-
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-
-
-
 
 </LinearLayout>
 

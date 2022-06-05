@@ -23,32 +23,32 @@ public class TopPicksAdaptor extends RecyclerView.Adapter<TopPicksAdaptor.ViewHo
     private Context mContext;
 
 
-
-    // data is passed into the constructor
     public TopPicksAdaptor(Context context, List<Shoe> data) {
         this.mInflater = LayoutInflater.from(context);
         this.mContext = context;
         this.mShoes = data;
     }
 
-    // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.list_view_shoe_item, parent, false);
         return new ViewHolder(view);
     }
 
-    // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        //Get current shoe
         Shoe currentShoe = mShoes.get(position);
 
+        //Get and set image
         int i = mContext.getResources().getIdentifier(
                 currentShoe.getImageFilenameList().get(0), "drawable",
                 mContext.getPackageName());
-        holder.shoeTextView.setText(currentShoe.getName());
-        //Setting the icon\
         holder.shoeImageView.setImageResource(i);
+
+        //Set text
+        holder.shoeTextView.setText(currentShoe.getName());
+
 
     }
 
@@ -80,17 +80,13 @@ public class TopPicksAdaptor extends RecyclerView.Adapter<TopPicksAdaptor.ViewHo
 
     }
 
-    // convenience method for getting data at click position
-    Shoe getItem(int id) {
-        return mShoes.get(id);
-    }
 
-    // allows clicks events to be caught
+    //Sets up the click listener
     public void setClickListener(ItemClickListener itemClickListener) {
         this.mClickListener = itemClickListener;
     }
 
-    // parent activity will implement this method to respond to click events
+    //Used by activities when item is clicked
     public interface ItemClickListener {
         void onItemClick(View view, int position);
 

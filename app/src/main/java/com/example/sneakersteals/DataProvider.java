@@ -12,8 +12,7 @@ public class DataProvider {
         List<String> colourList = new ArrayList<>(), imageFilenameList = new ArrayList<>();
         List<Integer> sizeList = new ArrayList<>();
         Shoe generatedShoe = null;
-        //This function will generate a shoe based on the id given. This will be manually filled out
-        // with id = 1 as an example
+        //This function will generate a shoe based on the id given. This represents the database of info
         if (id == 1) {
             name = "Nike Air Force 1";
             brand = "Nike";
@@ -436,17 +435,21 @@ public class DataProvider {
         }
         return generatedShoe;
     }
+
     public DataProvider() {
         for (int i = 1; i < 31; i++) {
+            //Populate shoeList with all shoes given
             this.shoeList.add(generateShoe(i));
         }
     }
+
     public List<Shoe> getShoes() {
         //This function will provide a list of generated shoe objects.
         return this.shoeList;
     }
+
     public List<Shoe> getBrandShoes(String brand) {
-        //This function will provide a list of generated shoe objects.
+        //This function will provide a list of generated shoe objects by brand
         List<Shoe> shoeList = new LinkedList<Shoe>();
         for (int i = 0; i < this.shoeList.size() ; i++) {
             Shoe currentShoe = this.shoeList.get(i);
@@ -457,9 +460,10 @@ public class DataProvider {
         return shoeList;
     }
     public List<Shoe> getSearchShoes(String input) {
+        //Will search shoe names, colours and descriptions for a match
         List<Shoe> shoeList = new LinkedList<Shoe>();
         String searchable = input.toLowerCase();
-        for (int i = 0; i < this.shoeList.size() ; i++) {
+        for (int i = 0; i < this.shoeList.size() ; i++) { //Search through all shoes
             Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getName().toLowerCase().contains(searchable)) {
                 shoeList.add(currentShoe);
@@ -474,17 +478,18 @@ public class DataProvider {
         return shoeList;
     }
     public Shoe getOneShoe(String nameInput) {
+        //Return a single shoe given its name
         for (int i = 0; i < this.shoeList.size() ; i++) {
             Shoe currentShoe = this.shoeList.get(i);
             if (currentShoe.getName().equals(nameInput)) {
-                //global.database.shoeList.get(i).incrementViewCount();
-                //this.shoeList.get(i).incrementViewCount();
                 return currentShoe;
             }
         }
         return null;
     }
+
     public List<Shoe> getTopPicks() {
+        //Will provide the three shoes will the highest viewcount
         List<Shoe> shoeList = new LinkedList<Shoe>();
         List<Shoe> searchList = new ArrayList<Shoe>(this.shoeList);
         for (int count = 0; count < 3; count++) {

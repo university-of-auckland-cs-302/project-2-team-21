@@ -26,7 +26,6 @@
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchview"
             android:layout_width="match_parent"
-
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="10dp"
@@ -46,13 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-
         android:layout_marginTop="80dp">
-
-
-
-
-
 
         <TextView
             android:layout_width="match_parent"
@@ -64,8 +57,6 @@
             android:textSize="26sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText" />
-
-
 
     </LinearLayout>
 
@@ -86,8 +77,6 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -96,10 +85,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/TopPicksShoes"
-
         android:layout_centerInParent="true"
         android:layout_centerVertical="true"
-
         >
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -109,8 +96,6 @@
             android:src="@drawable/nikeclouds"
             app:civ_border_color="#FFFF"
             app:civ_border_width="2dp"
-
-
             tools:ignore="RtlSymmetry" />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -118,10 +103,8 @@
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:src="@drawable/adidasclouds"
-
             app:civ_border_color="#FFFF"
             app:civ_border_width="2dp"
-
             tools:ignore="RtlSymmetry">
 
         </de.hdodenhof.circleimageview.CircleImageView>
@@ -133,8 +116,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@id/NikeAdidaslayout"
-
-
         android:layout_centerInParent="true"
         >
 
@@ -142,30 +123,12 @@
             android:id="@+id/pumalogo"
             android:layout_width="200dp"
             android:layout_height="150dp"
-
             android:src="@drawable/pumacircle"
             app:civ_border_color="#FFFF"
             app:civ_border_width="2dp"
-
-
-
-
-
-
             tools:ignore="RtlSymmetry" >
 
         </de.hdodenhof.circleimageview.CircleImageView>
     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
 
 </RelativeLayout>
