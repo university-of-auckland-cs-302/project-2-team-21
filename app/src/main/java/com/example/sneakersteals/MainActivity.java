@@ -1,6 +1,7 @@
 package com.example.sneakersteals;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,14 +60,15 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
+        statusBarcolour();
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         //((SneakSteals) this.getApplication()).initialize();
         vh = new ViewHolder();
-
         TopPicksAdaptor topPicksAdaptor = new TopPicksAdaptor(this, database.getTopPicks());
         recyclerView.setLayoutManager(layoutManager);
+
         //TopPicksAdaptor.setClickListener(this);
         recyclerView.setAdapter(topPicksAdaptor);
 
@@ -174,5 +176,11 @@ public class MainActivity extends AppCompatActivity implements TopPicksAdaptor.I
         this.supportActionBar = supportActionBar;
     }
 
-
+    public void statusBarcolour() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));
+        }else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple));
+        }
+    }
 }
