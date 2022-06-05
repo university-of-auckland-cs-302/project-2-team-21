@@ -3,6 +3,7 @@ package com.example.sneakersteals;
 import static android.view.View.VISIBLE;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -43,6 +44,8 @@ public class CategoryActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.fadein, R.anim.fadeout);
             setContentView(R.layout.activity_list);
             ListView listView = findViewById(R.id.list);
+            statusBarcolour();
+
 
             //Get the intent (Which brand to display)
             String brand = getIntent().getStringExtra("Brand");
@@ -97,4 +100,12 @@ public class CategoryActivity extends AppCompatActivity {
 
 
         }
+
+    public void statusBarcolour() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));
+        }else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple));
+        }
+    }
 }

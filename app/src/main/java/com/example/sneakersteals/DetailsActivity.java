@@ -5,6 +5,7 @@ import static android.view.View.INVISIBLE;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -74,6 +75,7 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
 
         Singleton global=Singleton.getInstance();
         DataProvider database = global.getDatabase();
+        statusBarcolour();
 
 
         String selectedName = getIntent().getStringExtra("Name");
@@ -165,6 +167,14 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void statusBarcolour() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple,this.getTheme()));
+        }else if ((Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)){
+            getWindow().setStatusBarColor(getResources().getColor(R.color.purple));
+        }
     }
 
 
