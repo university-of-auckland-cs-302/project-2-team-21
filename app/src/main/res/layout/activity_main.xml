@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
     android:background="@drawable/gradient_background"
-    android:layout_width="wrap_content">
+    android:layout_width="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -92,21 +92,24 @@
 
     <LinearLayout
         android:id="@+id/NikeAdidaslayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/TopPicksShoes"
-        android:layout_centerInParent="true"
         android:orientation="horizontal"
-        android:paddingTop="25dp">
+        android:layout_below="@id/TopPicksShoes"
+
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+
+        >
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/NikeClouds"
             android:layout_width="200dp"
             android:layout_height="150dp"
             android:src="@drawable/nikeclouds"
-
             app:civ_border_color="#FFFF"
             app:civ_border_width="2dp"
+
 
             tools:ignore="RtlSymmetry" />
 
@@ -114,13 +117,11 @@
             android:id="@+id/adidasclouds"
             android:layout_width="200dp"
             android:layout_height="150dp"
-
-
             android:src="@drawable/adidasclouds"
+
             app:civ_border_color="#FFFF"
-
-
             app:civ_border_width="2dp"
+
             tools:ignore="RtlSymmetry">
 
         </de.hdodenhof.circleimageview.CircleImageView>
