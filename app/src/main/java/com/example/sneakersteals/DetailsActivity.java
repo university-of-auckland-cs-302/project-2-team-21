@@ -24,6 +24,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.sneakersteals.Adaptors.ShoeAdaptor;
 import com.example.sneakersteals.Adaptors.ViewPageAdapter;
 import com.example.sneakersteals.Models.Shoe;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.Locale;
 
@@ -38,6 +39,7 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
         TextView nameTextView, descriptionTextView, sizeTextView;
         ImageView shoeImageView;
         ViewPager mViewPager;
+        TabLayout mTabLayout;
         Spinner sizeDropdown;
         ImageButton returnButton;
         CircleImageView colourImageView1, colourImageView2, colourImageView3, colourImageView4;
@@ -55,6 +57,7 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
             colourImageView4 = findViewById(R.id.fourthcolour);
             sizeDropdown = findViewById(R.id.size_dropdown);
             returnButton = findViewById(R.id.back_button_details);
+            mTabLayout = findViewById(R.id.tablayout);
         }
     }
 
@@ -83,6 +86,7 @@ public class DetailsActivity extends AppCompatActivity implements AdapterView.On
         ViewPager viewPager = findViewById(R.id.viewPager);
 
         viewPager.setAdapter(mViewPagerAdapter);
+        vh.mTabLayout.setupWithViewPager(viewPager, true);
 
         ArrayAdapter<String> dropdownAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, currentShoe.getSizeList());
         dropdownAdapter.setDropDownViewResource(com.google.android.material.R.layout.support_simple_spinner_dropdown_item);
